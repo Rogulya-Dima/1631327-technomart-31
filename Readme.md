@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дмитрий Рогуля](https://up.htmlacademy.ru/htmlcss/31/user/1631327).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Пак](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
