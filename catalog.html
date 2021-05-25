@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Техномарт</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Логотип магазина Техномарт">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="blank.html">Главная</a></li> 
+          <li><a href="blank.html">Компания</a></li>
+          <li><a href="blank.html">Каталог</a></li>
+          <li><a href="blank.html">Новости</a></li>
+          <li><a href="blank.html">Спецпредложения</a></li>
+          <li><a href="blank.html">Доставка</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+        <ul>
+          <li><a href="blank.html">Войти</a></li>
+          <li><a href="blank.html">Регистрация</a></li>
+        </ul>
+        <ul>
+          <li><a href="blank.html">Закладки</a></li>
+          <li><a href="blank.html">Корзина</a></li>
+          <li><a href="blank.html">Оформить заказ</a></li>
+        </ul>
+      </nav>
+      <form>
+        <input type="search" placeholder="Поиск:">
+      </form>
+      <!-- Вопрос наставнику:
+      По поводу секции ниже, хочеться ее как то озаглавить, например <h2>Информация из личного кабинета</h2>. 
+      Но так как эта секция находится в хедере, я не знаю нужен ли тут заголовок. -->
+      <section>
+        <a href="blank.html"> <img src="https://via.placeholder.com/20x18" width="20" height="18" alt="Лототип пользователя">
+          <p>Равшан Джамшутович</p>
+        </a>
+        <ul>
+          <li><a href="blank.html">Мои заказы</a></li>
+          <li><a href="blank.html">Личный кабинет</a></li>
+          <li><a href="blank.html"> <img src="https://via.placeholder.com/20x18" width="20" height="18" alt="Выйти из личного кабинета"></a></li>
+        </ul>
+      </section>
+      <!-- Вопрос наставнику:
+        Ниже сгрупировал абзацем элементы по семантике. Можно оборачивать в абзац элемент, если он один, как ccылка здесь? -->
+      <p>Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
+      <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+      <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p> 
+    </header> 
+    <main>
+      <!-- Вопрос наставнику:
+      Хочется озаглавить секцию ниже <h2>Раздел в котором Вы находитесь</h2>,на лайве преподаватель не озаглавливал "хлебные крошки". 
+      Стоит ли озаглавить?
+      Второй вопрос, по семантике иконка домика подходит в этот список, я ее добавил не смотря на то, что это различные теги, можно так делать?-->
+      <section>
+        <ul>
+          <li><a href="index.html"><img src="https://via.placeholder.com/12x14" height="12" width="14" alt="Главная страница"></a></li>
+          <li><a href="blank.html">Каталог</a></li>
+          <li><a href="blank.html">Инструмент</a></li>
+          <li>Перфораторы</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Перфораторы</h1>
+        <section>
+          <h2>Фильтр</h2>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <fieldset>
+              <legend>Цена</legend>
+              <input type="range" min="0" max="30000" value="25000" disabled>
+              <p>
+                <input type="number" value="0" disabled> -
+                <input type="number" value="30000" disabled>
+              </p>
+            </fieldset>
+            <fieldset>
+              <legend>Производители</legend>
+              <ul>
+                <li>
+                  <label><input type="checkbox" name="BOSCH" checked>BOSCH</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="INTERSKOL">ИНТЕРСКОЛ</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="MAKITA" checked>MAKITA</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="Dewalt">Dewalt</label>
+                </li>
+                <li>
+                  <label><input type="checkbox" name="Hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Питание</legend>
+              <ul>
+                <li><label><input type="radio" name="power-supply" value="batteries">Аккумуляторные</label></li>
+                <li><label><input type="radio" name="power-supply" value="electricity-network">Сетевые</label></li>
+              </ul>
+            </fieldset>
+            <button type="submit" >Показать</button>
+          </form>
+        </section>
+        <section>
+          <h2>Сортировка</h2>
+          <ul>
+            <li><button type="button" >ПО ЦЕНЕ</button></li>
+            <li><button type="button" >ПО ТИПУ</button></li>
+            <li><button type="button" >ПО ФУНКЦИОНАЛУ</button></li>
+            <li><button type="button" >От меньшего к большему</button></li>
+            <li><button type="button" >От большего к меньшему</button></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Каталог перфораторов</h2>
+          <ul>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 6000</p>
+                <p>
+                  <del>30500 Р.</del> <br>
+                  <ins>25500 Р.</ins>
+                </p>
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 6000</p>
+                <p>
+                  <del>30500 Р.</del> <br>
+                  <ins>25500 Р.</ins>
+                </p>
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 6000</p>
+                <p>
+                  <del>30500 Р.</del> <br>
+                  <ins>25500 Р.</ins>
+                </p>
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 3000</p>
+                <p>
+                  <del>22500 Р.</del> <br>
+                  <ins>15500 Р.</ins>
+                </p> 
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 6000</p>
+                <p>
+                  <del>30500 Р.</del> <br>
+                  <ins>25500 Р.</ins>
+                </p>
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 2000</p>
+                <p>12500 Р.</p>
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 3000</p>
+                <p>
+                  <del>22500 Р.</del> <br>
+                  <ins>15500 Р.</ins>
+                </p> 
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 6000</p>
+                <p>
+                  <del>30500 Р.</del> <br>
+                  <ins>25500 Р.</ins>
+                </p>
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+            <li>
+              <a href="blank.html">
+                <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+                <p>Перфоратор BOSCH <br> BFG 2000</p>
+                <p>12500 Р.</p>
+              </a>
+              <p>
+                <button type="button">Купить</button>
+                <button type="button">В закладки</button>
+              </p>
+            </li>
+          </ul>
+          <!-- Вопрос наставнику:
+          Может объеденить ниже кнопки с маркированным списком? -->
+          <button type="button" disabled>Предыдущая</button>
+          <ul>
+            <li>1</li>
+            <li><a href="blank.html">2</a></li>
+            <li><a href="blank.html">3</a></li>
+          </ul>
+          <button type="button">Следующая</button>
+        </section>
+        <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h2>Ссылки на основные разделы сайта</h2>
+        <a href="index.html">
+          <img src="https://via.placeholder.com/220x68" width="220" height="68" alt="Логотип магазина Техномарт">
+        </a>
+        <ul>
+          <li>
+            <a href="blank.html">Компания</a>
+          </li>
+          <li>
+            <a href="blank.html">Новости</a>
+          </li>
+          <li>
+            <a href="blank.html">Каталог</a>
+          </li>
+          <li>
+            <a href="blank.html">Доставка</a>
+          </li>
+          <li>
+            <a href="blank.html">Контакты</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="blank.html">Материалы</a>
+          </li>
+          <li>
+            <a href="blank.html">Техника</a>
+          </li>
+          <li>
+            <a href="blank.html">Инструмент</a>
+          </li>
+          <li>
+            <a href="blank.html">Спецпредложения</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Наши контакты</h2>
+        <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p> 
+        <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+      </section>
+      <section>
+        <h2>Копирайт</h2>
+        <p>© 2010–2021 Компания «Техномарт» <br> Все права защищены</p>  
+      </section>
+      <section>
+        <h2>Социальные сети</h2>
+        <ul>
+          <li>
+            <a href="https://vk.com/" target="blank">
+              <img src="https://via.placeholder.com/220x68" width="44" height="44" alt="Логотип Вконтакте">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="blank">
+              <img src="https://via.placeholder.com/220x68" width="44" height="44" alt="Логотип Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="blank">
+              <img src="https://via.placeholder.com/220x68" width="44" height="44" alt="Логотип Инстаграмм">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p> Обратная связь: <br> <a href=" mailto:mail@htmlacademy.ru ">mail@htmlacademy.ru</a> </p>
+      </section>
+      <section>
+        <p> Разработано — <br> <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">htmlacademy.ru</a> </p>
+      </section>
+    </footer>
+        
+    <!-- Всплывающее окно -->
+    <img src="https://via.placeholder.com/66x66" width="66" height="66" alt="">
+    <p>Товар добавлен в корзину!</p>
+    <a href="blank.html">ОФОРМИТЬ ЗАКАЗ</a>
+    <button type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>  

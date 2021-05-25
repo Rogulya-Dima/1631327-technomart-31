@@ -5,8 +5,368 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
+    <header>
+      <img src="https://via.placeholder.com/220x47" width="220" height="47" alt="Логотип магазина Техномарт">
+      <nav>
+        <!-- Здесь сделал навигацию из 3 отдельных списков, т.к. посчитал что элементы семантично не совсем одинаковы 
+        и лепить их в один список не стоит. Лиза что скажешь по этому поводу? -->
+        <ul>
+          <li>Главная</li>
+          <li><a href="blank.html">Компания</a></li>
+        <!-- Ниже ссылка ведет на пустой бланк. Т.к. страница, подписанная "catalog.html.", которую я верстал, 
+          ведет не на главную страницу каталога, а на один из его разделов.
+          Если нужно могу везде поменять на страницы catalog.html. -->
+          <li><a href="blank.html">Каталог</a></li>
+          <li><a href="blank.html">Новости</a></li>
+          <li><a href="blank.html">Спецпредложения</a></li>
+          <li><a href="blank.html">Доставка</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+        <ul>
+          <li><a href="blank.html">Войти</a></li>
+          <li><a href="blank.html">Регистрация</a></li>
+        </ul>
+        <ul>
+          <li><a href="blank.html">Закладки</a></li>
+          <li><a href="blank.html">Корзина</a></li>
+          <li><a href="blank.html">Оформить заказ</a></li>
+        </ul>
+      </nav>
+      <form>
+        <input type="search" placeholder="Поиск:">
+      </form>
+      <p>Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</p>
+      <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+      <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p> 
+    </header> 
+    <main>
+      <h1>Интернет-магазин "Техномарт"</h1>
+      <section>
+        <!-- В этой секции мне хотелось обернуть все содержимое li  в тег figure с подписью в figcaption. 
+        Не обернул потому что по материалам академии, эти теги используются для дополнительного демонстрационного материала,
+        если такой материал удалить, то основное содержимое страницы не должно "пострадать" от этого.
+        Я прав, или с тегами для иллюстрации этот список был бы более семантичен? Что скажешь наставник? -->
+        <h2>Каталог товаров и услуг</h2>
+        <ul>
+          <li>
+            <h3>Материалы</h3>
+            <img src="https://via.placeholder.com/300x123" width="300" height="123" alt="Логотип с изображением ведра с краской">
+            <a href="blank.html"><p>на любой вкус</p></a> 
+          </li>
+          <li>
+            <h3>Инструмент</h3>
+            <img src="https://via.placeholder.com/300x123" width="300" height="123" alt="Логотип с изображением аккумуляторной дрели">
+            <a href="blank.html"><p>на все случаи</p></a> 
+          </li>
+          <li>
+            <h3>Техника</h3>
+            <img src="https://via.placeholder.com/300x123" width="300" height="123" alt="Логотип с изображением трактора">
+            <a href="blank.html"><p>для стройки</p></a>
+          </li>
+          <li>
+            <h3>Скидки 50%</h3>
+              <img src="https://via.placeholder.com/300x123" width="300" height="123" alt="Логотип с изображением покупательской тележки">
+              <a href="blank.html"><p>на 350 товаров</p></a>
+          </li>
+          <li>
+            <h3>Доставка</h3>
+            <img src="https://via.placeholder.com/300x123" width="300" height="123" alt="Логотип с изображением машины доставки">
+            <a href="blank.html"><p>бесплатно</p></a>
+          </li>
+        </ul>
+      </section>
+      <!-- В секции ниже, я не уверен что нужен заголовок, это больше похоже на демострационный слайдер с разновидностями инструментов.
+      Возможно сюда подойдут теги Figure? Лиза, что по этому поводу думаешь?-->
+      <section>
+        <ul>
+          <li>
+            <h3>Перфораторы</h3>
+            <p>Настоящие мужские игрушки</p>
+            <img src="https://via.placeholder.com/620x266" width="620" height="266" alt="Строитель сверлит стену с перфоратором в руках">
+          </li>
+          <li>
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+            <img src="https://via.placeholder.com/620x266" width="620" height="266" alt="Строитель сверлит стену с аккумуляторной дрелью в руках">
+          </li>
+        </ul>
+        <p>
+          <button type="button">назад</button>
+          <button type="button">вперед</button>
+        </p>
+        <a href="catalog.html">Открыть каталог</a>
+      </section>
+      <section>
+      <!-- Здесь размер картинок подобран под размер блоков, для однообразия. 
+      Сами блоки состоят из нескольких слоев, настоящие размеры картинок буду подбирать когда начну экспорт графики в проект.
+      Так же в этой секции обернул <del> и <ins>, а так же кнопки в абзацы.
+      Прочитал что тегами абзацев можно групировать чисто семантичные элементы. Да и на главной странице, даже на чистом HTML,
+      так элементы выглядят более дружественно для пользователя. Что по этому поводу думает наставник :) ? -->
+        <h2>Популярные товары</h2>
+        <ul>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+              <p>Перфоратор BOSCH <br> BFG 9000</p>
+              <p>
+                <del>32500 Р.</del> <br>
+                <ins>25500 Р.</ins>
+              </p>
+            </a>
+            <p>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </p>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+              <p>Перфоратор BOSCH <br> BFG 3000</p>
+              <p>
+                <del>22500 Р.</del> <br>
+                <ins>15500 Р.</ins>
+              </p> 
+            </a>
+            <p>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </p>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+              <p>Перфоратор BOSCH <br> BFG 6000</p>
+              <p>
+                <del>30500 Р.</del> <br>
+                <ins>25500 Р.</ins>
+              </p>
+            </a>
+            <p>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </p>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x318" width="220" height="318" alt="">
+              <p>Перфоратор BOSCH <br> BFG 2000</p>
+              <p>
+                <del>22500 Р.</del> <br>
+                <ins>12500 Р.</ins>
+              </p>
+            </a>
+            <p>
+              <button type="button">Купить</button>
+              <button type="button">В закладки</button>
+            </p>
+          </li>
+        </ul>
+        <a href="blank.html">Все популярные товары</a>  
+      </section>
+      <section>
+        <h2>Популярные производители</h2>
+        <ul>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип Bosch">
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип Makita">
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип Dewalt">
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип Интерскол">
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип Hitachi">
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип LG">
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип AEG">
+            </a>
+          </li>
+          <li>
+            <a href="blank.html">
+              <img src="https://via.placeholder.com/220x145" width="220" height="145"  alt="Логотип Metabo">
+            </a>
+          </li>
+        </ul>
+        <a href="blank.html">Все производители</a>
+      </section>  
+      <section>
+        <h2>Сервисы</h2>
+        <p>
+          Хороший интернет-магазин отличается от плохого не только ценами!
+          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+        </p>
+        <section>
+          <ul>
+            <li>
+              <button type="button" disabled>Доставка</button>
+            </li>
+            <li>
+              <button type="button" >Гарантия</button>
+            </li>
+            <li>
+              <button type="button" >Кредит</button>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <figure>
+                <img src="https://via.placeholder.com/468x261" width="468" height="261" alt="логотип машины доставки">
+                <figcaption>
+                  <h3>Доставка</h3>
+                  <p>
+                    Мы с удовольствием доставим ваш товар прямо
+                    к вашему подъезду совершенно бесплатно!
+                    Ведь мы неплохо заработаем, 
+                    поднимая его на ваш этаж!
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>  
+        </section>
+      </section>
+      <section>
+        <h2>О нас</h2>
+        <p>Компания «Техномарт»</p>
+        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+          ремонта и строительства не оставит равнодушными любителей сэкономить на 
+          гастарбайтерах. 
+        </p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+          Техномарт работает со многими транспортными компаниями:
+        </p>
+        <ul>
+          <li>
+            Деловые линии
+          </li>
+          <li>
+            Автотрейдинг
+          </li>
+          <li>
+            ЖелДорЭкспедиция
+          </li>
+        </ul>
+        <a href="blank.html">Подробнее о компании</a>
+      </section>
+      <section>
+        <h2>Мы на карте города</h2>
+        <p>Контакты</p>
+        <p>Вы можете забрать товар сами, заехав в наш офис:</p>
+        <!-- Здесь будет карта -->
+        <a href="blank.html">
+          <img src="https://via.placeholder.com/300x158" width="300" height="158" alt="схематическая карта проезда">
+        </a>
+        <!-- Ссылку ниже засунул в параграф, чтобы текст не наезжал на карту, на чистом HTML это выглядет более юзер френдли. 
+          Лиза что скажешь по этому поводу? -->
+        <p><a href="blank.html">Заблудились? Напишите нам!</a></p>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h2>Ссылки на основные разделы сайта</h2>
+        <img src="https://via.placeholder.com/220x68" width="220" height="68" alt="Логотип магазина Техномарт">
+        <ul>
+          <li>
+            <a href="blank.html">Компания</a>
+          </li>
+          <li>
+            <a href="blank.html">Новости</a>
+          </li>
+          <li>
+            <a href="blank.html">Каталог</a>
+          </li>
+          <li>
+            <a href="blank.html">Доставка</a>
+          </li>
+          <li>
+            <a href="blank.html">Контакты</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="blank.html">Материалы</a>
+          </li>
+          <li>
+            <a href="blank.html">Техника</a>
+          </li>
+          <li>
+            <a href="blank.html">Инструмент</a>
+          </li>
+          <li>
+            <a href="blank.html">Спецпредложения</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Наши контакты</h2>
+        <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p> 
+        <p><a href="tel:+78005558628">+7 800 555-86-28</a></p>
+      </section>
+      <section>
+        <h2>Копирайт</h2>
+        <p>© 2010–2021 Компания «Техномарт» <br> Все права защищены</p>  
+      </section>
+      <section>
+        <h2>Социальные сети</h2>
+        <ul>
+          <li>
+            <a href="https://vk.com/" target="blank">
+              <img src="https://via.placeholder.com/220x68" width="44" height="44" alt="Логотип Вконтакте">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/" target="blank">
+              <img src="https://via.placeholder.com/220x68" width="44" height="44" alt="Логотип Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="blank">
+              <img src="https://via.placeholder.com/220x68" width="44" height="44" alt="Логотип Инстаграмм">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- Вопрос наставнику: здесь у меня логические секции состоят из одного элемента, можно так делать,
+           или убрать <section> и оставить только <p>?  
+           Могут ли секции состоять из одного элемента?-->
+      <section>
+        <p> Обратная связь: <br> <a href=" mailto:mail@htmlacademy.ru ">mail@htmlacademy.ru</a> </p>
+      </section>
+      <section>
+        <p> Разработано — <br> <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">htmlacademy.ru</a> </p>
+      </section>
+    </footer>
+    
+    
+    <!-- Форма обратной  связи -->
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label>Ваше имя:<input type="text" name="User-name" placeholder="Имя Фамилия"></label>
+        <label>Ваш e-mail:<input type="email" name="User-email" placeholder="email@example.com"></label>
+      </p> 
+      <p><label>Текст письма:<textarea name="User-comment">В свободной форме</textarea></label></p>
+      <button type="submit">Отправить</button>
+    </form>
   </body>
 </html>
