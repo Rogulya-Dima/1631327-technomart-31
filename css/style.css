@@ -1,0 +1,589 @@
+@font-face {
+  font-family:"Сuprum";
+  font-weight: 400;
+  font-style: normal;
+  /*Вопрос наставнику
+   Валидатор ругается на значение "src:local" , пишет:
+   Too many values or values are not recognized. 
+   Что я здесь сделал не так?*/
+  src: local("../fonts/cuprum.woff2") format("woff2"),
+       local("../fonts/cuprum.woff") format("woff");
+}
+@font-face {
+  font-family:"Сuprum";
+  font-weight: 700;
+  font-style: normal;
+  src: local("../fonts/cuprumbold.woff2") format("woff2"), 
+       local("../fonts/cuprumbold.woff") format("woff");
+}
+@font-face {
+  font-family:"Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: local("../fonts/cuprumitalic.woff2") format("woff2"),
+       local("../fonts/cuprumitalic.woff") format("woff");
+}
+@font-face {
+  font-family:"Cuprum";
+  font-weight: 700;
+  font-style: italic;
+  src: local("../fonts/cuprumbolditalic.woff2") format("woff2"),
+       local("../fonts/cuprumbolditalic.woff") format("woff");
+}
+@font-face {
+  font-family:"PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("../fonts/ptsans.woff2") format("woff2"),
+       local("../fonts/ptsans.woff") format("woff");
+}
+@font-face {
+  font-family:"PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: local("../fonts/ptsansbold.woff2") format("woff2"),
+       local("../fonts/ptsansbold.woff") format("woff");
+}
+
+/* Variables  */
+
+:root {
+  --basic-red:#EE3643;
+  --basic-green:#63A63E;
+  --basic-grey:#3D546F;
+  --basic-greylight:#C5C5C5;
+  --basic-white:#FFFFFF;
+  --basic-black:#000000;
+  --basic-background:#F1F5F7;
+  /* Добавил белый полупрозрачный, в стайлгайде используется при кликах на ссылки для изменения текста.
+  Наверное это было лишнее, и правильно будет задавать прозрачность контейнеру через opacity, в который будут эти ссылки вкладываться? */
+  --transparency-white: rgba(255, 255, 255, 0.5);
+  --special-yellow:#FFBF47;
+  --success:#5FBB2D;
+  --error:#BA2732;
+  --color-click-161D29:#161D29;
+  --color-32425C:#32425C;
+  --color-293449:#293449;
+  --color-1D2739:#1D2739;
+  --color-CA2C37:#CA2C37;
+  --color-518534:#518534;
+  --color-FFD180:#FFD180;
+  --color-63A63E:#63A63E;
+  --color-F9F5F0:#F9F5F0;
+  --color-A9A9A9:#A9A9A9;
+  --color-F3F7F9:#F3F7F9;
+  --color-212A3A:#212A3A;
+}
+    
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Global */
+
+body {
+  min-width: 960px;
+  padding: 0px;
+  margin: 0px;
+  /* Не уверен что ниже подключены правильно шрифты, пересмотреть шпору с подключением шрифтов 
+  Шрифты не подключились! */
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  color:var(--basic-black);
+  background-color: var(--basic-white);
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style:none;
+}
+.tipical-red-button {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color:var(--basic-red);
+}
+.tipical-red-button:hover,
+.tipical-red-button:focus {
+  background-color: var(--color-CA2C37);
+}
+.tipical-red-button:active {
+  background-color: var(--error);
+}
+
+/* Временный фон, чтобы было видно белые буквы  */
+
+.text-visibility {
+  background-color: slategrey;
+}
+
+/* Header */
+
+.main-header {
+  background-color: var(--basic-background);
+}
+
+.header-order-wrapper {
+  background-color: var(--color-293449);
+}
+.main-header-logo,
+.main-footer-logo{
+  background-color: var(--basic-red);
+}
+.main-header-logo:active,
+.main-footer-logo:active {
+  background-color: var(--error);
+}
+
+/* Пока не понятно как придать форме поиска состояние при клике  из стайлгайда.*/
+.search{
+  font-size: 18px;
+  color: var(--basic-white);
+}
+.order-section-item a {
+  font-size: 18px;
+  color: var(--basic-white);
+}
+
+/* Прозначность текста заменить на opasity */
+.bookmarks:active,
+.basket:active {
+  color: var(--transparency-white);
+  background-color:var(--color-click-161D29);
+}
+.сheckout {
+  background-color:var(--success);
+}
+/* Прозначность текста заменить на opasity */
+.сheckout:active {
+  color: var(--transparency-white);
+  background-color:var(--basic-green);
+}
+.header-shop-description {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: left;
+  color: var(--basic-red);
+}
+.header-phone {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+}
+.header-shop-address {
+  font-size: 14px;
+  color: var(--color-32425C);
+}
+.unreg-user-section-list a{
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+.unreg-user-section-list a:focus,
+.unreg-user-section-list a:hover{
+  color:var(--basic-red);
+}
+.unreg-user-section-list a:active{
+  color: var(--basic-greylight);
+}
+
+/* main-navigation */
+.main-navigation{
+background-color: var(--color-32425C);
+}
+.main-navigation a {
+  font-size: 18px;
+  color: var(--basic-white);  
+}
+.main-navigation a:focus,
+.main-navigation a:hover {
+  background-color: var(--color-293449);
+}
+.main-navigation a:active {
+  font-size: 18px;
+  background-color: var(--color1D2739); 
+}
+
+/* main */
+
+/* promo */
+.promo-header {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+.promo-item a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.promo-item a:hover,
+.promo-item a:focus{
+  background-color:var(--basic-greylight);
+}
+.promo-item a:active{
+  background-color:var(--color-A9A9A9);
+}
+.promo-slider-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.promo-slider-text {
+  font-size: 18px;
+  color: var(--basic-white);
+}
+
+/* index.html-popular and catalog.html-perforators-list*/
+.popular-products-wrapper,
+.popular-manufacturers-wrapper {
+  background-color: var(--color-F9F5F0);
+}
+ .popular-products h2,
+ .popular-manufacturers h2 {
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+color: var(--color-32425C);
+}
+.popular-products-text,
+.perforators-item-text {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+.pass-through-text,
+.new-price {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--color-A9A9A9);
+}
+.new-price {
+  text-decoration: none;
+  color: var(--basic-white);
+}
+.popular-products-item button:first-child,
+.perforators-list-item button:first-child {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white); 
+  background-color: var(--basic-green);
+}
+.popular-products-item button:first-child:hover,
+.popular-products-item button:first-child:focus,
+.perforators-list-item button:first-child:hover,
+.perforators-list-item button:first-child:focus {
+  background-color: var(--success);
+}
+.popular-products-item button:first-child:active,
+.perforators-list-item button:first-child:active  {
+  background-color: var(--color-518534);
+}
+.popular-products-item button:last-child,
+.perforators-list-item button:last-child {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color:var(--color-32425C);
+  background-color: var(--basic-white);
+}
+
+ /* services */
+.services-wripper {
+  background-color: var(--basic-background);
+}
+.services h2,.services h3 {
+  font-size: 30px; 
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.services h3  {
+  color:var(--color-32425C);
+}
+.services p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+}
+.services-button-item button{
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+.services-button-item .current {
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-black); 
+  background-color: var(--basic-white);
+}
+.services-button-item button:hover,
+.services-button-item button:focus {
+  color: var(--color-32425C);
+  background-color: var(--basic-white);
+}
+.services-button-item button:active {
+  color: var(--basic-black);
+}
+
+/*about-us and contacts*/
+.about-us-company-name,
+.contacts-header {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.about-us-info,
+.contacts-info {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+.about-us-list li {
+ font-size: 18px;
+}
+
+/* footer */
+
+.main-footer {
+  background-color:var(--color-32425C) ;
+}
+.site-sections-list a {
+  font-size: 18px;
+  color: var(--basic-background);
+}
+.products-sections-list a {
+  font-size: 18px;
+  color: var(--color-FFD180);
+}
+.site-sections-list a:hover,
+.site-sections-list a:focus,
+.products-sections-list a:hover,
+.products-sections-list a:focus {
+  text-decoration: underline;
+}
+.footer-contacts-description,
+.footer-contacts-phone {
+  font-size: 18px;
+  color: var(--color-F3F7F9);
+}
+.bottom-footer-wrapper {
+  background-color:var(--color-293449);
+}
+.copyright p,
+.feedback p{
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+.copyright a,
+.feedback a{
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--color-FFD180);
+}
+.copyright a:hover,
+.copyright a:focus,
+.feedback a:hover,
+.feedback a:focus{
+  text-decoration: underline;
+}
+.copyright a:active,
+.feedback a:active{
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+/* Скорее всего состояние наведения и активности для  иконок социальны сетей нужно будет применить к их контейнерам */
+.socials a {
+  background-color:var(--color-212A3A);
+}
+.socials a:hover,
+.socials a:focus,
+.socials a:active {
+  background-color:var(--basic-red);
+}
+
+/* popup-feedback */
+
+.popup-feedback-description {
+  font-size: 18px;
+}
+.popup-feedback [placeholder],
+.popup-feedback [name="User-comment"] {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--color-A9A9A9);
+}
+
+/* catalog.html */
+
+/* header */
+
+/* reg user section */
+.reg-user-section-wrapper {
+  background-color:var(--basic-white);
+}
+.reg-user-section p {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+.reg-user-section-list a {
+  font-size: 16px;
+  line-height: 18px;
+  color:var(--color-32425C);
+}
+.reg-user-section-list a:hover,
+.reg-user-section-list a:focus{
+  color: var(--basic-red);
+}
+.reg-user-section p:active,
+.reg-user-section-list a:active{
+  color: var(--basic-greylight);
+}
+
+/* main */
+
+.breadcrumbs-list a {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+.perforators-wrapper {
+  background-color: var(--basic-background);
+}
+.products-list h1 {
+font-size: 30px;
+line-height: 30px;
+text-transform: uppercase;
+color: var(--color-32425C);
+}
+
+/* filters */
+.filters {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+}
+.filters fieldset {
+  border: none;
+}
+.filters legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.filters [type="number"] {
+  font-size: 17px;
+  line-height: 18px;
+}
+.filters [type="checkbox"],
+.filters [type="radio"] {
+  font-size: 15px;
+  line-height: 19px;
+}
+.filters [type="submit"] {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* sorting */
+.sorting h2 {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.sorting button {
+  opacity: 0.3;
+}
+.sorting button:hover,
+.sorting button:focus {
+  opacity: 1;
+}
+.sorting button:active {
+  color: var(--basic-red);
+  opacity: 1;
+}
+.sorting .current {
+  color: var(--basic-red);
+  opacity: 1;
+}
+
+/* pagination */
+
+.pagination {
+font-family: "PT Sans", Arial, sans-serif;
+font-weight: 400;
+font-size: 13px;
+line-height: 18px; 
+}
+
+.pagination .current {
+  color: var(--basic-white);
+  background-color:var(--basic-red);
+}
+.pagination .current:active {
+  color: var(--basic-black);
+  background-color:var(--basic-white);
+}
+
+/* about perforators */
+.about-perforators {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  background-color: var(--basic-background);
+}
+.about-perforators h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px; 
+}
+  
+/* popup-added to basket*/
+
+.popup-added-to-basket {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  background-color: var(--basic-white);
+}
+.popup-added-to-basket [type="button"] {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--basic-white);
+}
+
