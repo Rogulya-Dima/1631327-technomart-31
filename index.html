@@ -15,7 +15,7 @@
       <div class="header-order-wrapper">
         <img class="main-header-logo" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
         <form>
-          <label class="search">Поиск:<input type="search"></label>
+          <input class="search" type="search" placeholder="Поиск:">
         </form>
         <section class="order-section">
           <ul class="order-section-list">
@@ -48,129 +48,122 @@
     </header> 
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-      <!-- Добавил обертку промоблоку, чтобы задать ей временный фон, чтобы было видно белые буквы -->
-      <div class="text-visibility">
-        <section class="promo">
-          <!--Вопрос наставнику:
-          Здесь логотипы являются декоративными изображениями, нужен тут "alt" текст который я добавлял ранее в разметку? -->
-          <h2 class="visually-hidden">Каталог товаров и услуг</h2>
-          <ul class="promo-list">
-            <li class="promo-item">
-              <h3 class="promo-header">Материалы</h3>
-              <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
-              <img src="img/promo-block/icon-materials.svg" width="44" height="65" alt="Логотип с изображением ведра с краской">
-              <a href="blank.html">на любой вкус</a> 
-            </li>
-            <li class="promo-item">
-              <h3 class="promo-header">Инструмент</h3>
-              <img src="img/promo-block/icon-tool.svg" width="75" height="61" alt="Логотип с изображением аккумуляторной дрели">
-              <a href="blank.html">на все случаи</a> 
-            </li>
-            <li class="promo-item">
-              <h3 class="promo-header">Техника</h3>
-              <img src="img/promo-block/icon-tecnics.svg" width="78" height="62" alt="Логотип с изображением трактора">
-              <a href="blank.html">для стройки</a>
-            </li>
-            <li class="promo-item">
-              <h3 class="promo-header">Скидки 50%</h3>
-              <img src="img/promo-block/icon-discount.svg" width="59" height="72" alt="Логотип с изображением покупательской тележки">
-              <a href="blank.html">на 350 товаров</a>
-            </li>
-            <li class="promo-item">
-              <h3 class="promo-header">доставка</h3>
-              <img src="img/promo-block/icon-delivery.svg" width="78" height="63" alt="Логотип с изображением машины доставки">
-              <a href="blank.html">бесплатно</a>
-            </li>
-          </ul>
-        </section>
-        <section class="promo-slider">
-          <ul class="promo-slider-list">
-            <li class="promo-slider-item">
-              <p class="promo-slider-header">Перфораторы</p>
-              <p class="promo-slider-text">Настоящие мужские игрушки</p>
-              <img src="img/promo-block/slider/perforators.jpg" width="620" height="266" alt="Строитель сверлит стену с перфоратором в руках">
-              <a href="catalog.html" class="tipical-red-button">Открыть каталог</a>
-            </li>
-            <li class="promo-slider-item">
-              <p class="promo-slider-header">Дрели</p>
-              <p class="promo-slider-text">Соседям на радость!</p>
-              <img src="img/promo-block/slider/drills.jpg" width="620" height="266" alt="Строитель сверлит стену с аккумуляторной дрелью в руках">
-              <a href="blank.html" class="tipical-red-button">Открыть каталог</a>
-            </li>
-          </ul>
-          <p>
-            <button class="promo-slider-button-back" type="button">назад</button>
-            <button class="promo-slider-button-next" type="button">вперед</button>
-          </p>
-        </section>
-      </div>
+      <section class="promo">
+        <h2 class="visually-hidden">Каталог товаров и услуг</h2>
+        <ul class="promo-list">
+          <li class="promo-item materials ">
+            <h3 class="promo-header">Материалы</h3>
+            <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
+            <img src="img/promo-block/icon-materials.svg" width="44" height="65" alt="">
+            <a href="blank.html">на любой вкус</a> 
+          </li>
+          <li class="promo-item tools">
+            <h3 class="promo-header">Инструмент</h3>
+            <img src="img/promo-block/icon-tool.svg" width="75" height="61" alt="">
+            <a href="blank.html">на все случаи</a> 
+          </li>
+          <li class="promo-item technics">
+            <h3 class="promo-header">Техника</h3>
+            <img src="img/promo-block/icon-tecnics.svg" width="78" height="62" alt="">
+            <a href="blank.html">для стройки</a>
+          </li>
+          <li class="promo-item discounts">
+            <h3 class="promo-header">Скидки 50%</h3>
+            <img src="img/promo-block/icon-discount.svg" width="59" height="72" alt="">
+            <a href="blank.html">на 350 товаров</a>
+          </li>
+          <li class="promo-item delivery">
+            <h3 class="promo-header">Доставка</h3>
+            <img src="img/promo-block/icon-delivery.svg" width="78" height="63" alt="">
+            <a href="blank.html">бесплатно</a>
+          </li>
+        </ul>
+      </section>
+      <section class="promo-slider">
+        <ul class="promo-slider-list">
+          <li class="promo-slider-item">
+            <p class="promo-slider-header">Перфораторы</p>
+            <p class="promo-slider-text">Настоящие мужские игрушки</p>
+            <img src="img/promo-block/slider/perforators.jpg" width="620" height="266" alt="Строитель сверлит стену с перфоратором в руках">
+            <a href="catalog.html" class="tipical-red-button">Открыть каталог</a>
+          </li>
+          <li class="promo-slider-item">
+            <p class="promo-slider-header">Дрели</p>
+            <p class="promo-slider-text">Соседям на радость!</p>
+            <img src="img/promo-block/slider/drills.jpg" width="620" height="266" alt="Строитель сверлит стену с аккумуляторной дрелью в руках">
+            <a href="blank.html" class="tipical-red-button">Открыть каталог</a>
+          </li>
+        </ul>
+        <p>
+          <button class="promo-slider-button-back" type="button">назад</button>
+          <button class="promo-slider-button-next" type="button">вперед</button>
+        </p>
+      </section>
       <section class="popular-products">
-        <div class="popular-products-wrapper">
+        <div class="popular-products-wrapper"></div>
           <h2>Популярные товары:</h2>
           <a class="tipical-red-button" href="blank.html">Все популярные товары:</a> 
         </div>
-        <div class="text-visibility">
-          <ul class="popular-products-list">
-            <li class="popular-products-item">
+        <ul class="popular-products-list">
+          <li class="popular-products-item">
+            <a href="blank.html">
+              <img src="img/catalog/bosch-bfg-9000.jpg" width="184" height="164" alt="Большой перфоратор с питанием от сети">
+              <p class="popular-products-text">Перфоратор BOSCH BFG 9000</p>
+              <p>
+                <del class="pass-through-text">32500 Р.</del>
+                <ins class="new-price">25500 Р.</ins>
+              </p>
+            </a>
+            <p>
+              <button class="popular-products-button buy" type="button">Купить</button>
+              <button class="popular-products-button to-bookmarks" type="button">В закладки</button>
+            </p>
+          </li>
+          <li class="popular-products-item">
               <a href="blank.html">
-                <img src="img/catalog/bosch-bfg-9000.jpg" width="184" height="164" alt="Большой перфоратор с питанием от сети">
-                <p class="popular-products-text">Перфоратор BOSCH BFG 9000</p>
-                <p>
-                  <del class="pass-through-text">32500 Р.</del>
-                  <ins class="new-price">25500 Р.</ins>
-                </p>
-              </a>
+              <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
+              <img src="img/catalog/bosch-bfg-3000.jpg" width="127" height="112" alt="Маленький перфоратор с питанием от аккумулятора">
+              <p class="popular-products-text">Перфоратор BOSCH BFG 3000</p>
               <p>
-                <button class="button popular-products-button" type="button">Купить</button>
-                <button class="button popular-products-button" type="button">В закладки</button>
-              </p>
-            </li>
-            <li class="popular-products-item">
-                <a href="blank.html">
-                <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
-                <img src="img/catalog/bosch-bfg-3000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
-                <p class="popular-products-text">Перфоратор BOSCH BFG 3000</p>
-                <p>
-                  <del class="pass-through-text">22500 Р.</del>
-                  <ins class="new-price">15500 Р.</ins>
-                </p> 
-              </a>
+                <del class="pass-through-text">22500 Р.</del>
+                <ins class="new-price">15500 Р.</ins>
+              </p> 
+            </a>
+            <p>
+              <button class="popular-products-button buy" type="button">Купить</button>
+              <button class="popular-products-button to-bookmarks" type="button">В закладки</button>
+            </p>
+          </li>
+          <li class="popular-products-item">
+            <a href="blank.html">
+              <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
+              <p class="popular-products-text">Перфоратор BOSCH BFG 6000</p>
               <p>
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <del class="pass-through-text">30500 Р.</del>
+                <ins class="new-price">25500 Р.</ins>
               </p>
-            </li>
-            <li class="popular-products-item">
+            </a>
+            <p>
+              <button class="popular-products-button buy" type="button">Купить</button>
+              <button class="popular-products-button to-bookmarks" type="button">В закладки</button>
+            </p>
+          </li>
+          <li class="popular-products-item">
               <a href="blank.html">
-                <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
-                <p class="popular-products-text">Перфоратор BOSCH BFG 6000</p>
-                <p>
-                  <del class="pass-through-text">30500 Р.</del>
-                  <ins class="new-price">25500 Р.</ins>
-                </p>
-              </a>
+              <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
+              <img src="img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Маленький перфоратор с питанием от аккумулятора">
+              <p class="popular-products-text">Перфоратор BOSCH BFG 2000</p>
               <p>
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
+                <del class="pass-through-text">22500 Р.</del>
+                <ins class="new-price">12500 Р.</ins>
               </p>
-            </li>
-            <li class="popular-products-item">
-                <a href="blank.html">
-                <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
-                <img src="img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
-                <p class="popular-products-text">Перфоратор BOSCH BFG 2000</p>
-                <p>
-                  <del class="pass-through-text">22500 Р.</del>
-                  <ins class="new-price">12500 Р.</ins>
-                </p>
-              </a>
-              <p>
-                <button type="button">Купить</button>
-                <button type="button">В закладки</button>
-              </p>
-            </li>
-          </ul>
-        </div>
+            </a>
+            <p>
+              <button class="popular-products-button buy" type="button">Купить</button>
+              <button class="popular-products-button to-bookmarks" type="button">В закладки</button>
+            </p>
+          </li>
+        </ul>
       </section>
       <section class="popular-manufacturers">
         <div class="popular-manufacturers-wrapper">
@@ -248,7 +241,7 @@
                   Ведь мы неплохо заработаем, 
                   поднимая его на ваш этаж!
                 </p>
-                <img src="img/delivery-car.png" width="468" height="261" alt="логотип машины доставки">
+                <img src="img/delivery-car.png" width="468" height="261" alt="Логотип машины доставки">
               </li>
             </ul>  
           </section>
@@ -362,12 +355,13 @@
     </footer>
         
     <!-- Форма обратной  связи -->
+  
     <form class="popup-feedback" action="https://echo.htmlacademy.ru" method="post">
       <p>
-        <label class="popup-feedback-description">Ваше имя:<input type="text" name="User-name" placeholder="Имя Фамилия"></label>
-        <label class="popup-feedback-description">Ваш e-mail:<input type="email" name="User-email" placeholder="email@example.com"></label>
+        <label class="popup-feedback-description">Ваше имя:<input type="text" name="user-name" placeholder="Имя Фамилия"></label>
+        <label class="popup-feedback-description">Ваш e-mail:<input type="email" name="user-email" placeholder="email@example.com"></label>
       </p> 
-      <p><label class="popup-feedback-description">Текст письма:<textarea name="User-comment">В свободной форме</textarea></label></p>
+      <p><label class="popup-feedback-description">Текст письма:<textarea name="user-comment">В свободной форме</textarea></label></p>
       <button class="tipical-red-button" type="submit">Отправить</button>
       <button class="popup-close" type="button" ></button>
     </form>

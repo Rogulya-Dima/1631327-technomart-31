@@ -2,51 +2,48 @@
   font-family:"Сuprum";
   font-weight: 400;
   font-style: normal;
-  /*Вопрос наставнику
-   Валидатор ругается на значение "src:local" , пишет:
-   Too many values or values are not recognized. 
-   Что я здесь сделал не так?*/
-  src: local("../fonts/cuprum.woff2") format("woff2"),
-       local("../fonts/cuprum.woff") format("woff");
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+       url("../fonts/cuprum.woff") format("woff");
 }
 @font-face {
   font-family:"Сuprum";
   font-weight: 700;
   font-style: normal;
-  src: local("../fonts/cuprumbold.woff2") format("woff2"), 
-       local("../fonts/cuprumbold.woff") format("woff");
+  src: url("../fonts/cuprumbold.woff2") format("woff2"), 
+       url("../fonts/cuprumbold.woff") format("woff");
 }
 @font-face {
   font-family:"Cuprum";
   font-weight: 400;
   font-style: italic;
-  src: local("../fonts/cuprumitalic.woff2") format("woff2"),
-       local("../fonts/cuprumitalic.woff") format("woff");
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+       url("../fonts/cuprumitalic.woff") format("woff");
 }
 @font-face {
   font-family:"Cuprum";
   font-weight: 700;
   font-style: italic;
-  src: local("../fonts/cuprumbolditalic.woff2") format("woff2"),
-       local("../fonts/cuprumbolditalic.woff") format("woff");
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+       url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 @font-face {
   font-family:"PT Sans";
   font-weight: 400;
   font-style: normal;
-  src: local("../fonts/ptsans.woff2") format("woff2"),
-       local("../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
 }
 @font-face {
   font-family:"PT Sans";
   font-weight: 700;
   font-style: normal;
-  src: local("../fonts/ptsansbold.woff2") format("woff2"),
-       local("../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
 }
 
 /* Variables  */
 
+/* colors */
 :root {
   --basic-red:#EE3643;
   --basic-green:#63A63E;
@@ -55,13 +52,15 @@
   --basic-white:#FFFFFF;
   --basic-black:#000000;
   --basic-background:#F1F5F7;
-  /* Добавил белый полупрозрачный, в стайлгайде используется при кликах на ссылки для изменения текста.
-  Наверное это было лишнее, и правильно будет задавать прозрачность контейнеру через opacity, в который будут эти ссылки вкладываться? */
-  --transparency-white: rgba(255, 255, 255, 0.5);
+  --transparency-white: #ffffff80;
+  --transparency-black:#00000040;
   --special-yellow:#FFBF47;
   --success:#5FBB2D;
   --error:#BA2732;
-  --color-click-161D29:#161D29;
+  --color-bookmarks-and-basket-active-161D29:#161D29;
+  --color-promo-tools-background:#3BBCE3;
+  --color-promo-technics-background:#DC91D8;
+  --color-promo-discounts-background:#8ED78F;
   --color-32425C:#32425C;
   --color-293449:#293449;
   --color-1D2739:#1D2739;
@@ -85,15 +84,14 @@
 
 /* Global */
 
-body {
+.page-body {
   min-width: 960px;
   padding: 0px;
   margin: 0px;
-  /* Не уверен что ниже подключены правильно шрифты, пересмотреть шпору с подключением шрифтов 
-  Шрифты не подключились! */
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 18px;
   line-height: 24px;
   color:var(--basic-black);
   background-color: var(--basic-white);
@@ -123,18 +121,11 @@ ul {
   background-color: var(--error);
 }
 
-/* Временный фон, чтобы было видно белые буквы  */
-
-.text-visibility {
-  background-color: slategrey;
-}
-
 /* Header */
 
 .main-header {
   background-color: var(--basic-background);
 }
-
 .header-order-wrapper {
   background-color: var(--color-293449);
 }
@@ -146,22 +137,37 @@ ul {
 .main-footer-logo:active {
   background-color: var(--error);
 }
-
-/* Пока не понятно как придать форме поиска состояние при клике  из стайлгайда.*/
 .search{
-  font-size: 18px;
+  color: var(--basic-black);
+  background-color: var(--color-293449);
+  border: none;
+}
+.search:focus {
+  background-color: var(--basic-white);
+}
+.search::placeholder {
+  color: var(--basic-white);
+}
+.search::-webkit-input-placeholder {
+  color: var(--basic-white);
+}
+.search::-moz-placeholder {
+  color: var(--basic-white);
+}
+.search:-moz-placeholder {
+  color: var(--basic-white);
+}
+.search:-ms-input-placeholder {
   color: var(--basic-white);
 }
 .order-section-item a {
-  font-size: 18px;
   color: var(--basic-white);
 }
-
 /* Прозначность текста заменить на opasity */
 .bookmarks:active,
 .basket:active {
   color: var(--transparency-white);
-  background-color:var(--color-click-161D29);
+  background-color:var(--color-bookmarks-and-basket-active-161D29);
 }
 .сheckout {
   background-color:var(--success);
@@ -207,7 +213,6 @@ ul {
 background-color: var(--color-32425C);
 }
 .main-navigation a {
-  font-size: 18px;
   color: var(--basic-white);  
 }
 .main-navigation a:focus,
@@ -215,7 +220,6 @@ background-color: var(--color-32425C);
   background-color: var(--color-293449);
 }
 .main-navigation a:active {
-  font-size: 18px;
   background-color: var(--color1D2739); 
 }
 
@@ -241,6 +245,21 @@ background-color: var(--color-32425C);
 .promo-item a:active{
   background-color:var(--color-A9A9A9);
 }
+.materials {
+  background-color:var(--special-yellow);
+}
+.tools {
+  background-color: var(--color-promo-tools-background);
+}
+.technics {
+  background-color: var(--color-promo-technics-background);
+}
+.discounts {
+  background-color: var(--color-promo-discounts-background);
+}
+.delivery {
+  background-color:var(--special-yellow);
+}
 .promo-slider-header {
   font-weight: 700;
   font-size: 36px;
@@ -249,8 +268,10 @@ background-color: var(--color-32425C);
   color: var(--basic-white);
 }
 .promo-slider-text {
-  font-size: 18px;
   color: var(--basic-white);
+}
+.promo-slider-item {
+  background-color: var(--transparency-black);
 }
 
 /* index.html-popular and catalog.html-perforators-list*/
@@ -269,7 +290,6 @@ color: var(--color-32425C);
 .perforators-item-text {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
-  font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
 }
@@ -284,27 +304,28 @@ color: var(--color-32425C);
 .new-price {
   text-decoration: none;
   color: var(--basic-white);
+  background-color: var(--basic-red);
 }
-.popular-products-item button:first-child,
-.perforators-list-item button:first-child {
+.popular-products-button.buy,
+.perforators-list-button.buy {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-white); 
   background-color: var(--basic-green);
 }
-.popular-products-item button:first-child:hover,
-.popular-products-item button:first-child:focus,
-.perforators-list-item button:first-child:hover,
-.perforators-list-item button:first-child:focus {
+.popular-products-button.buy:hover,
+.popular-products-button.buy:focus,
+.perforators-list-button.buy:hover,
+.perforators-list-button.buy:focus {
   background-color: var(--success);
 }
-.popular-products-item button:first-child:active,
-.perforators-list-item button:first-child:active  {
+.popular-products-button.buy:active,
+.perforators-list-button.buy:active  {
   background-color: var(--color-518534);
 }
-.popular-products-item button:last-child,
-.perforators-list-item button:last-child {
+.popular-products-button.to-bookmarks,
+.perforators-list-button.to-bookmarks {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -364,9 +385,6 @@ color: var(--color-32425C);
   font-weight: 400;
   font-size: 13px;
 }
-.about-us-list li {
- font-size: 18px;
-}
 
 /* footer */
 
@@ -374,11 +392,9 @@ color: var(--color-32425C);
   background-color:var(--color-32425C) ;
 }
 .site-sections-list a {
-  font-size: 18px;
   color: var(--basic-background);
 }
 .products-sections-list a {
-  font-size: 18px;
   color: var(--color-FFD180);
 }
 .site-sections-list a:hover,
@@ -389,7 +405,6 @@ color: var(--color-32425C);
 }
 .footer-contacts-description,
 .footer-contacts-phone {
-  font-size: 18px;
   color: var(--color-F3F7F9);
 }
 .bottom-footer-wrapper {
@@ -419,7 +434,7 @@ color: var(--color-32425C);
   color: var(--basic-red);
 }
 
-/* Скорее всего состояние наведения и активности для  иконок социальны сетей нужно будет применить к их контейнерам */
+/* сделать правильный размер бэкграунда для иконок */
 .socials a {
   background-color:var(--color-212A3A);
 }
@@ -431,16 +446,50 @@ color: var(--color-32425C);
 
 /* popup-feedback */
 
-.popup-feedback-description {
-  font-size: 18px;
-}
-.popup-feedback [placeholder],
-.popup-feedback [name="User-comment"] {
+.popup-feedback input[type=text]::placeholder,
+.popup-feedback input[type=email]::placeholder,
+.popup-feedback [name="user-comment"] {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
+  line-height: 24px;
   color: var(--color-A9A9A9);
 }
+.popup-feedback input[type=text]::-webkit-input-placeholder,
+.popup-feedback input[type=email]::-webkit-input-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--color-A9A9A9);
+}
+.popup-feedback input[type=text]::-moz-placeholder,
+.popup-feedback input[type=email]::-moz-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--color-A9A9A9);
+}
+.popup-feedback input[type=text]:-moz-placeholder,
+.popup-feedback input[type=email]:-moz-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--color-A9A9A9);
+}
+.popup-feedback input[type=text]:-ms-input-placeholder,
+.popup-feedback input[type=email]:-ms-input-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--color-A9A9A9);
+}
+
+
+
 
 /* catalog.html */
 
@@ -476,6 +525,7 @@ color: var(--color-32425C);
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
   color: var(--basic-black);
 }
 .perforators-wrapper {
@@ -548,7 +598,9 @@ font-weight: 400;
 font-size: 13px;
 line-height: 18px; 
 }
-
+.pagination a{
+  color: var(--basic-black);
+}
 .pagination .current {
   color: var(--basic-white);
   background-color:var(--basic-red);
@@ -586,4 +638,3 @@ line-height: 18px;
   line-height: 18px;
   background-color: var(--basic-white);
 }
-
