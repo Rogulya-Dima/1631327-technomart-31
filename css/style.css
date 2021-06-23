@@ -95,6 +95,10 @@
   line-height: 24px;
   color:var(--basic-black);
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 a {
   text-decoration: none;
@@ -110,6 +114,7 @@ ul {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
   color: var(--basic-white);
   background-color:var(--basic-red);
 }
@@ -125,9 +130,37 @@ ul {
 
 .main-header {
   background-color: var(--basic-background);
+ 
+  margin-bottom: 120px;
+
+  outline: 5px solid blue;
+  outline-offset: -5px;
+}
+.header-order-bar {
+  background-color: var(--color-293449);
 }
 .header-order-wrapper {
-  background-color: var(--color-293449);
+  outline: 5px solid green;
+  outline-offset: -5px;
+  
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 60px);
+  column-gap: 20px;
+}
+.logo-wrapper {
+  width: 220px;
+  height: 47px;
+  text-align: center;
+  background-color: var(--basic-red);
+
+  outline: 5px solid greenyellow;
+  outline-offset: -5px;
+
+  grid-column: 1/4;
 }
 .main-header-logo,
 .main-footer-logo{
@@ -136,6 +169,15 @@ ul {
 .main-header-logo:active,
 .main-footer-logo:active {
   background-color: var(--error);
+}
+.search-wrapper {
+  width: 220px;
+  height: 42px;
+
+  outline: 5px solid greenyellow;
+  outline-offset: -5px;
+
+  grid-column: 4/7;
 }
 .search{
   color: var(--basic-black);
@@ -160,6 +202,17 @@ ul {
 .search:-ms-input-placeholder {
   color: var(--basic-white);
 }
+.order-section {
+  width: 460px;
+  outline: 5px solid greenyellow;
+  outline-offset: -5px;
+
+  grid-column: 7/-1;
+}
+.order-section-list {
+  margin: 0;
+  padding: 0;
+}
 .order-section-item a {
   color: var(--basic-white);
 }
@@ -177,12 +230,37 @@ ul {
   color: var(--transparency-white);
   background-color:var(--basic-green);
 }
+.header-shop-description-phone-and-addres-wrapper {
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 60px);
+  column-gap: 20px;
+}
 .header-shop-description {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
   text-align: left;
   color: var(--basic-red);
+  
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+
+  grid-column: 1/4;
+}
+.header-phone-and-shop-addres-wrapper {
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+
+  grid-column: 4/9;
+
+  text-align: center;
 }
 .header-phone {
   font-style: normal;
@@ -194,6 +272,16 @@ ul {
 .header-shop-address {
   font-size: 14px;
   color: var(--color-32425C);
+}
+.unreg-user-section {
+  grid-column: 9/13;
+
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+}
+.unreg-user-section-list {
+  margin: 0;
+  padding: 0;
 }
 .unreg-user-section-list a{
   font-size: 21px;
@@ -211,6 +299,18 @@ ul {
 /* main-navigation */
 .main-navigation{
 background-color: var(--color-32425C);
+width: 940px;
+margin: 0 auto;
+padding: 0 10px;
+}
+.main-navigation-list {
+  margin: 0;
+  padding: 0;
+
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+
+  justify-self: center;
 }
 .main-navigation a {
   color: var(--basic-white);  
@@ -224,13 +324,38 @@ background-color: var(--color-32425C);
 }
 
 /* main */
+.container{
+  margin-bottom: 70px;
+  padding: 0 10px;
+  outline: 5px solid blue;
+  outline-offset: -5px;
+}
 
 /* promo */
+.promo {
+  margin-bottom: 59px;
+}
+.promo-list {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+          
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  display: grid;
+  grid-template-columns: repeat(3,300px);
+  grid-template-rows: repeat(3,123px);
+  gap: 20px; 
+}
 .promo-header {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
+
+  margin: 0;
+  padding-left: 25px;
 }
 .promo-item a {
   font-size: 14px;
@@ -260,31 +385,114 @@ background-color: var(--color-32425C);
 .delivery {
   background-color:var(--special-yellow);
 }
+.promo-item.promo-slider {
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
 .promo-slider-header {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
   color: var(--basic-white);
+
+  margin: 0;
+  padding-left: 25px;
 }
 .promo-slider-text {
   color: var(--basic-white);
+
+  margin: 0;
+  padding-left: 25px;
+}
+.promo-slider-list{
+  margin: 0;
+  padding: 0;
 }
 .promo-slider-item {
   background-color: var(--transparency-black);
 }
 
+.promo-slider-item img {
+  overflow: hidden;
+}
+
+
 /* index.html-popular and catalog.html-perforators-list*/
-.popular-products-wrapper,
-.popular-manufacturers-wrapper {
+.popular-products-bar,
+.popular-manufacturers-bar {
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 10px;
+
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  display: grid;
+  grid-template-columns: repeat(4,220px);
+}
+.popular-products-list-wrapper,
+.popular-manufacturers-list-wrapper {
+   outline: 5px solid blue;
+   outline-offset: -5px;
+
+   width: 940px;
+   margin: 0 auto;
+   margin-bottom: 70px;
+   padding: 0 10px;
+}
+ .popular-products-list {
+   display: grid;
+   grid-template-columns: repeat(4,220px);
+   grid-template-rows: 318px;
+   gap: 20px;
+
+   margin: 0;
+   padding: 0;
+}
+.popular-manufacturers-list { 
+  display: grid;
+   grid-template-columns: repeat(4,220px);
+   /* 
+   Вопрос наставнику: 
+   в строке ниже, пришлось задавать размер строк
+   повторно, если я задаю только 1 раз, во второй
+   строке высота, уже не такая, которую я задал первой.
+   Соответственно при переполнении контентом, третья 
+   строка уже имеет другие размеры...
+   Почему так получается, подскажешь? */
+   grid-template-rows: 145px 145px;
+   gap: 20px;
+
+   margin: 0;
+   padding: 0;
+}
+.popular-products-item,
+.popular-manufacturers-item {
+  outline: 5px solid green;
+  outline-offset: -5px;
+}
+.popular-products h2,
+.popular-manufacturers h2 {
+  outline: 5px solid green;
+  outline-offset: -5px;
+
+  grid-column: 1/4;
+}
+.popular-products a {
+  grid-column: 4/5;
+}
+.popular-products-bar,
+.popular-manufacturers-bar {
   background-color: var(--color-F9F5F0);
 }
- .popular-products h2,
- .popular-manufacturers h2 {
-font-size: 30px;
-line-height: 30px;
-text-transform: uppercase;
-color: var(--color-32425C);
+.popular-products h2,
+.popular-manufacturers h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--color-32425C);
 }
 .popular-products-text,
 .perforators-item-text {
@@ -337,11 +545,39 @@ color: var(--color-32425C);
 .services-wripper {
   background-color: var(--basic-background);
 }
+.services {
+  outline: 5px solid blue;
+  outline-offset: -5px;
+  
+  width: 940px;
+  height: 522px;
+  
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding: 0 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4,235px);
+  grid-template-rows: 235px 283px;
+
+}
+.services-info-wripper {
+  outline: 5px solid green;
+  outline-offset: -5px;
+
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
+  margin: 0;
+  padding: 0; 
+}
 .services h2,.services h3 {
   font-size: 30px; 
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
+
+  margin: 0;
 }
 .services h3  {
   color:var(--color-32425C);
@@ -349,6 +585,14 @@ color: var(--color-32425C);
 .services p {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
+}
+.services-button {
+  outline: 5px solid green;
+  outline-offset: -5px;
+}
+.services-button-list {
+  margin: 0;
+  padding: 0;
 }
 .services-button-item button{
   font-size: 21px;
@@ -371,13 +615,54 @@ color: var(--color-32425C);
 .services-button-item button:active {
   color: var(--basic-black);
 }
+.services-delivery-wripper {
+  outline: 5px solid green;
+  outline-offset: -5px;
+
+  grid-column: 2/-1;
+}
+.services-delivery-wripper ul {
+  margin: 0;
+  padding: 0; 
+}
 
 /*about-us and contacts*/
+.about-us-and-contacts-wrapper {
+  outline: 5px solid blue;
+  outline-offset: -5px;
+  
+  width: 940px;
+  height: 356px;
+  
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding: 0 10px;
+
+  display: grid;
+  grid-template-columns: repeat(12,60px);
+  column-gap: 20px;
+}
+.about-us,
+.contacts {
+  outline: 5px solid green;
+  outline-offset: -5px;
+}
+.contacts {
+  grid-column: 9/-1;
+}
+.about-us{
+  grid-column: 1/7;
+}
+.about-us-list{
+  margin: 0;
+  padding: 0;
+}
 .about-us-company-name,
 .contacts-header {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  margin: 0;
 }
 .about-us-info,
 .contacts-info {
@@ -389,7 +674,46 @@ color: var(--color-32425C);
 /* footer */
 
 .main-footer {
-  background-color:var(--color-32425C) ;
+  background-color:var(--color-32425C);
+
+  outline: 5px solid blue;
+  outline-offset: -5px;
+}
+.footer-navigation-and-footer-contacts-wrapper {
+  outline: 5px solid green;
+  outline-offset: -5px;
+  width: 940px;
+    
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.footer-navigation {
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  display: grid;
+  grid-template-columns:  auto 1fr;
+  grid-template-rows: auto;
+}
+.site-sections-list {
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  grid-column: 2/-1;
+  justify-self: end;
+}
+.products-sections-list{
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  grid-column: 2/-1;
+  justify-self: end;
+}
+.footer-contacts{
+  outline: 5px solid blue;
+  outline-offset: -5px;
+  
+  grid-column: 1/2;
 }
 .site-sections-list a {
   color: var(--basic-background);
@@ -407,8 +731,32 @@ color: var(--color-32425C);
 .footer-contacts-phone {
   color: var(--color-F3F7F9);
 }
-.bottom-footer-wrapper {
+.bottom-footer-bar {
   background-color:var(--color-293449);
+}
+.bottom-footer-wrapper {
+  outline: 5px solid green;
+  outline-offset: -5px;
+  width: 940px;
+    
+  margin: 0 auto;
+  padding: 0 10px;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.copyright{
+  outline: 5px solid blue;
+  outline-offset: -5px;
+  justify-self: start;
+}
+.socials {
+  outline: 5px solid blue;
+  outline-offset: -5px;
+}
+.feedback {
+  outline: 5px solid blue;
+  outline-offset: -5px;
 }
 .copyright p,
 .feedback p{
@@ -446,6 +794,51 @@ color: var(--color-32425C);
 
 /* popup-feedback */
 
+.popup-feedback {
+  width: 620px;
+    
+  margin: 0 auto;
+  padding: 0 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  grid-template-rows: 1fr;
+
+  outline: 5px solid blue;
+  outline-offset: -5px;
+}
+.popup-close {
+  order: 1;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  justify-self: end;
+}
+.popup-feedback-description-text {
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+
+  grid-column: 1/2;
+  
+  margin-bottom: 12px;
+}
+.popup-feedback-description-email {
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+
+  grid-column: 2/3;
+  
+  margin-bottom: 12px;
+}
+.popup-feedback-description {
+  grid-column: 1/-1;
+
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+}
+.tipical-red-button.tipical-red-button-popup {
+  grid-column: 1/-1;
+}
 .popup-feedback input[type=text]::placeholder,
 .popup-feedback input[type=email]::placeholder,
 .popup-feedback [name="user-comment"] {
@@ -488,9 +881,6 @@ color: var(--color-32425C);
   color: var(--color-A9A9A9);
 }
 
-
-
-
 /* catalog.html */
 
 /* header */
@@ -532,10 +922,10 @@ color: var(--color-32425C);
   background-color: var(--basic-background);
 }
 .products-list h1 {
-font-size: 30px;
-line-height: 30px;
-text-transform: uppercase;
-color: var(--color-32425C);
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--color-32425C);
 }
 
 /* filters */
@@ -593,10 +983,10 @@ color: var(--color-32425C);
 /* pagination */
 
 .pagination {
-font-family: "PT Sans", Arial, sans-serif;
-font-weight: 400;
-font-size: 13px;
-line-height: 18px; 
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px; 
 }
 .pagination a{
   color: var(--basic-black);
