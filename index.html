@@ -13,7 +13,7 @@
   <body class="page-body">
     <header class="main-header">
       <div class="header-order-bar">
-        <div class="header-order-wrapper">
+        <div class="header-order-wrapper container">
           <div class="logo-wrapper">
             <img class="main-header-logo" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
           </div>
@@ -29,7 +29,7 @@
           </section>
         </div>
       </div>
-      <div class="header-shop-description-phone-and-addres-wrapper">
+      <div class="header-shop-description-phone-and-addres-wrapper container">
         <p class="header-shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-phone-and-shop-addres-wrapper">
           <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
@@ -42,7 +42,7 @@
           </ul>
         </section>
       </div>
-      <nav class="main-navigation">
+      <nav class="main-navigation container">
         <ul class="main-navigation-list">
           <li class="main-navigation-item"><a>Главная</a></li>
           <li class="main-navigation-item"><a href="blank.html">Компания</a></li>
@@ -54,46 +54,42 @@
         </ul>
       </nav>
     </header> 
-    <main class="container">
+    <main class="main-container">
       <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
       <section class="promo">
         <h2 class="visually-hidden">Каталог товаров и услуг</h2>
-        <ul class="promo-list">
-          <li class="promo-item materials ">
+        <div class="promo-article container">
+          <!-- Как ты писала ранее, поменял список на article, 
+            но я подумал, что article, это самостоятельный контент, который может существовать вне
+          сайта, тут тоже не совсем подходит, например отделы "скидки" и "доставка, точно отдельно
+          существовать не могут, может тут лучше article поменять на section?" -->
+          <article class="promo-article-item materials ">
             <h3 class="promo-header">Материалы</h3>
             <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
             <img src="img/promo-block/icon-materials.svg" width="44" height="65" alt="">
             <a href="blank.html">на любой вкус</a> 
-          </li>
-          <li class="promo-item tools">
+          </article>
+          <article class="promo-article-item tools">
             <h3 class="promo-header">Инструмент</h3>
             <img src="img/promo-block/icon-tool.svg" width="75" height="61" alt="">
             <a href="blank.html">на все случаи</a> 
-          </li>
-          <li class="promo-item technics">
+          </article>
+          <article class="promo-article-item technics">
             <h3 class="promo-header">Техника</h3>
             <img src="img/promo-block/icon-tecnics.svg" width="78" height="62" alt="">
             <a href="blank.html">для стройки</a>
-          </li>
-          <li class="promo-item discounts">
+          </article>
+          <article class="promo-article-item discounts">
             <h3 class="promo-header">Скидки 50%</h3>
             <img src="img/promo-block/icon-discount.svg" width="59" height="72" alt="">
             <a href="blank.html">на 350 товаров</a>
-          </li>
-          <li class="promo-item delivery">
+          </article>
+          <article class="promo-article-item delivery">
             <h3 class="promo-header">Доставка</h3>
             <img src="img/promo-block/icon-delivery.svg" width="78" height="63" alt="">
             <a href="blank.html">бесплатно</a>
-          </li>
-          <!--
-          Вопрос наставнику:
-          У меня не получалось сделать промоблок на гридах, потому что промослайдер 
-          не являлся дочерним элементом,контейнера с кнопками товаров и услуг,
-          которые должны его обтекать. Не чего лучшего не придумал, как включить 
-          этот слайдер в список "товаров и услуг" для того чтобы он стал дочерним элементом
-          грид контейнера. Мне кажется по смыслу он не вписывается в этот список. Подскажешь
-          вариант получше, как это реализовать?-->
-          <li class="promo-item promo-slider">
+          </article>
+          <article class="promo-article-item promo-slider">
             <!-- Пока не понятно, как вместить содержимое контейнера в нужные размеры
             ячейки грида, надеюсь это темы следующих уроков. -->
             <section class="promo-slider-section">
@@ -119,15 +115,19 @@
                 <button class="promo-slider-button-next" type="button">вперед</button>
               </p>
             </section>
-          </li>
-        </ul>
+          </article>
+        </div>
       </section>
-      <section class="popular-products">
+      <section class="popular-products container">
         <div class="popular-products-bar">
           <h2>Популярные товары:</h2>
           <a class="tipical-red-button" href="blank.html">Все популярные товары:</a>
         </div> 
-        <div class="popular-products-list-wrapper">
+        <!-- Вопрос наставнику. 
+        В обёркте ниже, после того как я сделал отдельный класс для контейнера и вынес в него
+        общие свойства, не понятно откуда появился margin-right: - 20px. 
+        Он выбивает блок из общего потока. Не могу понять откуда он взялся? -->
+        <div class="popular-products-list-wrapper container">
           <ul class="popular-products-list">
             <li class="popular-products-item">
               <a href="blank.html">
@@ -190,7 +190,7 @@
           </ul>
         </div>
       </section>
-      <section class="popular-manufacturers">
+      <section class="popular-manufacturers container">
         <div class="popular-manufacturers-bar">
           <h2>Популярные производители:</h2>
           <a class="tipical-red-button" href="blank.html">Все производители</a>
@@ -241,7 +241,7 @@
         </div>
       </section>  
       <div class="services-wripper">
-        <section class="services">
+        <section class="services container">
           <div class="services-info-wripper">
             <h2>Сервисы</h2>
             <p>
@@ -280,7 +280,7 @@
           </div>  
         </section>
       </div>
-      <div class="about-us-and-contacts-wrapper">
+      <div class="about-us-and-contacts-wrapper container">
         <section class="about-us">
           <h2 class="visually-hidden">О нас</h2>
           <p class="about-us-company-name">Компания «Техномарт»</p>
@@ -317,58 +317,54 @@
       </div>
     </main>
     <footer class="main-footer">
-     <div class="footer-navigation-and-footer-contacts-wrapper">
+     <div class="footer-navigation-and-footer-contacts-wrapper container">
         <section class="footer-navigation">
           <h2 class="visually-hidden">Ссылки на основные разделы сайта</h2>
           <img class="main-footer-logo" src="img/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт">
-          <ul class="site-sections-list">
-            <li>
-              <a href="blank.html">Компания</a>
-            </li>
-            <li>
-              <a href="blank.html">Новости</a>
-            </li>
-            <li>
-              <a href="blank.html">Каталог</a>
-            </li>
-            <li>
-              <a href="blank.html">Доставка</a>
-            </li>
-            <li>
-              <a href="blank.html">Контакты</a>
-            </li>
-          </ul>
-          <ul class="products-sections-list">
-            <li>
-              <a href="blank.html">Материалы</a>
-            </li>
-            <li>
-              <a href="blank.html">Техника</a>
-            </li>
-            <li>
-              <a href="blank.html">Инструмент</a>
-            </li>
-            <li>
-              <a href="blank.html">Спецпредложения</a>
-            </li>
-          </ul>
+          <div class="site-sections-list-wrapper">
+            <ul class="site-sections-list">
+              <li>
+                <a href="blank.html">Компания</a>
+              </li>
+              <li>
+                <a href="blank.html">Новости</a>
+              </li>
+              <li>
+                <a href="blank.html">Каталог</a>
+              </li>
+              <li>
+                <a href="blank.html">Доставка</a>
+              </li>
+              <li>
+                <a href="blank.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="products-sections-list-wrapper">
+            <ul class="products-sections-list">
+              <li>
+                <a href="blank.html">Материалы</a>
+              </li>
+              <li>
+                <a href="blank.html">Техника</a>
+              </li>
+              <li>
+                <a href="blank.html">Инструмент</a>
+              </li>
+              <li>
+                <a href="blank.html">Спецпредложения</a>
+              </li>
+            </ul>
+          </div>
+          <section class="footer-contacts">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <p class="footer-contacts-description">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p> 
+            <a  class="footer-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </section>
         </section>
-        <!-- 
-          Вопрос наставнику:
-          Мне бы не хотелось для того, чтобы сделать грид таблицу засовывать секцию контактов,
-          в секцию навигации, это будет не семантично. Пока мне в голову не приходит как придать
-          ей правильное расположение, подскажи пожалуйста. Есть вариант сделать 4 независимых блока 
-          с общей оберткой грида:
-          main-footer-logo/site-sections-list/products-sections-list/footer-contacts, но тогда придется
-          убрать секцию footer-navigation, что тоже не вариант.-->
-        <section class="footer-contacts">
-          <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="footer-contacts-description">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p> 
-          <a  class="footer-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-        </section>
-     </div>
+      </div>
       <div class="bottom-footer-bar">
-        <div class="bottom-footer-wrapper">
+        <div class="bottom-footer-wrapper container">
           <section class="copyright">
             <h2 class="visually-hidden">Копирайт</h2>
             <p>© 2010–2021 Компания «Техномарт» Все права защищены</p>  

@@ -100,6 +100,11 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 }
+.container{
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 a {
   text-decoration: none;
 }
@@ -142,13 +147,9 @@ ul {
 .header-order-wrapper {
   outline: 5px solid green;
   outline-offset: -5px;
-  
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-  
+    
   display: grid;
-  grid-template-columns: repeat(12, 60px);
+  grid-template-columns: min-content min-content auto;
   column-gap: 20px;
 }
 .logo-wrapper {
@@ -159,8 +160,6 @@ ul {
 
   outline: 5px solid greenyellow;
   outline-offset: -5px;
-
-  grid-column: 1/4;
 }
 .main-header-logo,
 .main-footer-logo{
@@ -176,8 +175,6 @@ ul {
 
   outline: 5px solid greenyellow;
   outline-offset: -5px;
-
-  grid-column: 4/7;
 }
 .search{
   color: var(--basic-black);
@@ -206,8 +203,6 @@ ul {
   width: 460px;
   outline: 5px solid greenyellow;
   outline-offset: -5px;
-
-  grid-column: 7/-1;
 }
 .order-section-list {
   margin: 0;
@@ -233,13 +228,9 @@ ul {
 .header-shop-description-phone-and-addres-wrapper {
   outline: 5px solid yellow;
   outline-offset: -5px;
-
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   
   display: grid;
-  grid-template-columns: repeat(12, 60px);
+  grid-template-columns:repeat(3, 300px);
   column-gap: 20px;
 }
 .header-shop-description {
@@ -251,14 +242,10 @@ ul {
   
   outline: 5px solid yellowgreen;
   outline-offset: -5px;
-
-  grid-column: 1/4;
 }
 .header-phone-and-shop-addres-wrapper {
   outline: 5px solid yellowgreen;
   outline-offset: -5px;
-
-  grid-column: 4/9;
 
   text-align: center;
 }
@@ -274,8 +261,6 @@ ul {
   color: var(--color-32425C);
 }
 .unreg-user-section {
-  grid-column: 9/13;
-
   outline: 5px solid yellowgreen;
   outline-offset: -5px;
 }
@@ -299,9 +284,6 @@ ul {
 /* main-navigation */
 .main-navigation{
 background-color: var(--color-32425C);
-width: 940px;
-margin: 0 auto;
-padding: 0 10px;
 }
 .main-navigation-list {
   margin: 0;
@@ -324,28 +306,18 @@ padding: 0 10px;
 }
 
 /* main */
-.container{
-  margin-bottom: 70px;
-  padding: 0 10px;
-  outline: 5px solid blue;
-  outline-offset: -5px;
-}
 
 /* promo */
 .promo {
   margin-bottom: 59px;
 }
-.promo-list {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-          
+.promo-article{
   outline: 5px solid blue;
   outline-offset: -5px;
 
   display: grid;
   grid-template-columns: repeat(3,300px);
-  grid-template-rows: repeat(3,123px);
+  grid-template-rows:123px;
   gap: 20px; 
 }
 .promo-header {
@@ -357,17 +329,17 @@ padding: 0 10px;
   margin: 0;
   padding-left: 25px;
 }
-.promo-item a {
+.promo-article-item a {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-white);
 }
-.promo-item a:hover,
-.promo-item a:focus{
+.promo-article-item a:hover,
+.promo-article-itema:focus{
   background-color:var(--basic-greylight);
 }
-.promo-item a:active{
+.promo-article-item a:active{
   background-color:var(--color-A9A9A9);
 }
 .materials {
@@ -385,7 +357,7 @@ padding: 0 10px;
 .delivery {
   background-color:var(--special-yellow);
 }
-.promo-item.promo-slider {
+.promo-article-item.promo-slider {
   grid-column: 1/3;
   grid-row: 2/4;
 }
@@ -421,11 +393,8 @@ padding: 0 10px;
 /* index.html-popular and catalog.html-perforators-list*/
 .popular-products-bar,
 .popular-manufacturers-bar {
-  width: 940px;
-  margin: 0 auto;
   margin-bottom: 20px;
-  padding: 0 10px;
-
+  
   outline: 5px solid blue;
   outline-offset: -5px;
 
@@ -437,10 +406,10 @@ padding: 0 10px;
    outline: 5px solid blue;
    outline-offset: -5px;
 
-   width: 940px;
-   margin: 0 auto;
    margin-bottom: 70px;
-   padding: 0 10px;
+}
+.popular-products-list-wrapper {
+  margin-right: 0, 0;
 }
  .popular-products-list {
    display: grid;
@@ -454,19 +423,14 @@ padding: 0 10px;
 .popular-manufacturers-list { 
   display: grid;
    grid-template-columns: repeat(4,220px);
-   /* 
-   Вопрос наставнику: 
-   в строке ниже, пришлось задавать размер строк
-   повторно, если я задаю только 1 раз, во второй
-   строке высота, уже не такая, которую я задал первой.
-   Соответственно при переполнении контентом, третья 
-   строка уже имеет другие размеры...
-   Почему так получается, подскажешь? */
-   grid-template-rows: 145px 145px;
+   
    gap: 20px;
 
    margin: 0;
    padding: 0;
+}
+.popular-manufacturers-item {
+  height: 145px;
 }
 .popular-products-item,
 .popular-manufacturers-item {
@@ -548,18 +512,11 @@ padding: 0 10px;
 .services {
   outline: 5px solid blue;
   outline-offset: -5px;
-  
-  width: 940px;
-  height: 522px;
-  
-  margin: 0 auto;
+    
   margin-bottom: 70px;
-  padding: 0 10px;
-
+  
   display: grid;
   grid-template-columns: repeat(4,235px);
-  grid-template-rows: 235px 283px;
-
 }
 .services-info-wripper {
   outline: 5px solid green;
@@ -630,14 +587,9 @@ padding: 0 10px;
 .about-us-and-contacts-wrapper {
   outline: 5px solid blue;
   outline-offset: -5px;
-  
-  width: 940px;
-  height: 356px;
-  
-  margin: 0 auto;
+    
   margin-bottom: 70px;
-  padding: 0 10px;
-
+ 
   display: grid;
   grid-template-columns: repeat(12,60px);
   column-gap: 20px;
@@ -682,10 +634,6 @@ padding: 0 10px;
 .footer-navigation-and-footer-contacts-wrapper {
   outline: 5px solid green;
   outline-offset: -5px;
-  width: 940px;
-    
-  margin: 0 auto;
-  padding: 0 10px;
 }
 .footer-navigation {
   outline: 5px solid blue;
@@ -693,27 +641,33 @@ padding: 0 10px;
 
   display: grid;
   grid-template-columns:  auto 1fr;
-  grid-template-rows: auto;
+}
+.site-sections-list-wrapper {
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  grid-column: 2/-1;
 }
 .site-sections-list {
+  padding: 0;
+  margin: 0;
+}
+.products-sections-list-wrapper {
   outline: 5px solid blue;
   outline-offset: -5px;
 
   grid-column: 2/-1;
-  justify-self: end;
 }
 .products-sections-list{
-  outline: 5px solid blue;
-  outline-offset: -5px;
-
-  grid-column: 2/-1;
-  justify-self: end;
+  padding: 0;
+  margin: 0;
 }
 .footer-contacts{
   outline: 5px solid blue;
   outline-offset: -5px;
   
   grid-column: 1/2;
+  grid-row: 2/3;
 }
 .site-sections-list a {
   color: var(--basic-background);
@@ -737,11 +691,7 @@ padding: 0 10px;
 .bottom-footer-wrapper {
   outline: 5px solid green;
   outline-offset: -5px;
-  width: 940px;
-    
-  margin: 0 auto;
-  padding: 0 10px;
-  
+   
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
