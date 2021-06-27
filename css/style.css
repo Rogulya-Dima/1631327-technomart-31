@@ -1035,7 +1035,6 @@ background-color: var(--color-32425C);
 /* about perforators */
 .about-perforators-bar {
   height: 261px;
- 
   background-color: var(--basic-background);
 }
 .about-perforators {
@@ -1044,8 +1043,6 @@ background-color: var(--color-32425C);
   font-size: 13px;
   line-height: 24px;
   text-align: left;
-
-  margin-left: 130px;
 }
 .about-perforators h2 {
   font-family: "Cuprum", Arial, sans-serif;
