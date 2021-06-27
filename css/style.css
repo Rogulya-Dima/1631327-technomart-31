@@ -72,6 +72,9 @@
   --color-A9A9A9:#A9A9A9;
   --color-F3F7F9:#F3F7F9;
   --color-212A3A:#212A3A;
+  --color-F7F3EC:#F7F3EC;
+  --color-F1F1F1:#F1F1F1;
+
 }
     
 .visually-hidden {
@@ -225,7 +228,7 @@ ul {
   color: var(--transparency-white);
   background-color:var(--basic-green);
 }
-.header-shop-description-phone-and-addres-wrapper {
+.header-shop-description-phone-addres-and-user-section-wrapper {
   outline: 5px solid yellow;
   outline-offset: -5px;
   
@@ -836,6 +839,10 @@ background-color: var(--color-32425C);
 /* header */
 
 /* reg user section */
+.reg-user-section {
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+}
 .reg-user-section-wrapper {
   background-color:var(--basic-white);
 }
@@ -843,6 +850,10 @@ background-color: var(--color-32425C);
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
+}
+.reg-user-section-list {
+  padding: 0;
+  margin: 0;
 }
 .reg-user-section-list a {
   font-size: 16px;
@@ -859,7 +870,18 @@ background-color: var(--color-32425C);
 }
 
 /* main */
+.breadcrumbs {
+  margin-bottom: 20px;
+} 
+.breadcrumbs-list {
+  display: grid;
 
+  margin: 0;
+  padding: 0;
+  
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px
+}
 .breadcrumbs-list a {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
@@ -868,20 +890,43 @@ background-color: var(--color-32425C);
   text-transform: uppercase;
   color: var(--basic-black);
 }
-.perforators-wrapper {
+.perforators-heading-wrapper {
+  height: 89px;
+  margin-bottom: 20px;
+
   background-color: var(--basic-background);
 }
 .products-list h1 {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-left: 30px;
+
   color: var(--color-32425C);
 }
 
 /* filters */
+.filters-sorting-perforators-list-and-pagination-wrapper {
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
+
+  display: grid;
+  grid-template-columns: 220px 700px;
+  column-gap: 20px;
+
+  margin-bottom: 68px;
+}
+
 .filters {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
+ 
+  columns: 1/2;
+
+  outline: 5px solid blue;
+  outline-offset: -5px; 
 }
 .filters fieldset {
   border: none;
@@ -891,6 +936,10 @@ background-color: var(--color-32425C);
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+}
+.filters ul {
+  margin: 0;
+  padding: 0;
 }
 .filters [type="number"] {
   font-size: 17px;
@@ -907,12 +956,21 @@ background-color: var(--color-32425C);
 }
 
 /* sorting */
+.sorting {
+  margin-bottom: 28px;
+  background-color:var(--color-F7F3EC);
+  ;
+}
 .sorting h2 {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+}
+.sorting ul {
+  margin: 0;
+  padding: 0;
 }
 .sorting button {
   opacity: 0.3;
@@ -930,13 +988,37 @@ background-color: var(--color-32425C);
   opacity: 1;
 }
 
-/* pagination */
+/*perforators-list */
+.perforators-list {
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
 
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  display: grid;
+  grid-template-columns: repeat(3,220px);
+  grid-template-rows: 318px;
+  column-gap: 20px;
+  row-gap: 18px;
+}
+.perforators-list-item {
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+}
+
+/* pagination */
 .pagination {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px; 
+
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  grid-column: 2/3;
 }
 .pagination a{
   color: var(--basic-black);
@@ -951,12 +1033,19 @@ background-color: var(--color-32425C);
 }
 
 /* about perforators */
+.about-perforators-bar {
+  height: 261px;
+ 
+  background-color: var(--basic-background);
+}
 .about-perforators {
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  background-color: var(--basic-background);
+  text-align: left;
+
+  margin-left: 130px;
 }
 .about-perforators h2 {
   font-family: "Cuprum", Arial, sans-serif;
@@ -970,7 +1059,32 @@ background-color: var(--color-32425C);
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+
+  width: 620px;
+  height: 283px;
+
+  margin: 0 auto;
+
+  outline: 5px solid blue;
+  outline-offset: -5px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7px 1fr 112px;
+
   background-color: var(--basic-white);
+}
+.popup-red-bar {
+  grid-row: 1/2;
+  background-color: var(--basic-red);
+}
+.popup-img-and-text-wrapper {
+  margin-left: 81px;
+}
+.popup-buttons-wrapper {
+  grid-row: 3/4;
+
+  background-color:var(--color-F1F1F1);
 }
 .popup-added-to-basket [type="button"] {
   font-weight: 400;

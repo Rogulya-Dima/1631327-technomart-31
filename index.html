@@ -18,7 +18,9 @@
             <img class="main-header-logo" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
           </div>
           <form>
-            <div class="search-wrapper"><input class="search" type="search" placeholder="Поиск:"></div>
+            <div class="search-wrapper">
+              <input class="search" type="search" placeholder="Поиск:">
+            </div>
           </form>
           <section class="order-section">
             <ul class="order-section-list">
@@ -29,7 +31,7 @@
           </section>
         </div>
       </div>
-      <div class="header-shop-description-phone-and-addres-wrapper container">
+      <div class="header-shop-description-phone-addres-and-user-section-wrapper container">
         <p class="header-shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-phone-and-shop-addres-wrapper">
           <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
@@ -59,10 +61,6 @@
       <section class="promo">
         <h2 class="visually-hidden">Каталог товаров и услуг</h2>
         <div class="promo-article container">
-          <!-- Как ты писала ранее, поменял список на article, 
-            но я подумал, что article, это самостоятельный контент, который может существовать вне
-          сайта, тут тоже не совсем подходит, например отделы "скидки" и "доставка, точно отдельно
-          существовать не могут, может тут лучше article поменять на section?" -->
           <article class="promo-article-item materials ">
             <h3 class="promo-header">Материалы</h3>
             <img src="img/symbols/catalog-new.svg" width="70" height="70" alt="">
@@ -127,7 +125,7 @@
         В обёркте ниже, после того как я сделал отдельный класс для контейнера и вынес в него
         общие свойства, не понятно откуда появился margin-right: - 20px. 
         Он выбивает блок из общего потока. Не могу понять откуда он взялся? -->
-        <div class="popular-products-list-wrapper container">
+        <div class="popular-products-list-wrapper">
           <ul class="popular-products-list">
             <li class="popular-products-item">
               <a href="blank.html">
