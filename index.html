@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="header-shop-description-phone-addres-and-user-section-wrapper container">
-        <p class="header-shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        <p class="header-shop-description">Интернет-магазин строительных материалов и инструментов для ремонта </p>
         <div class="header-phone-and-shop-addres-wrapper">
           <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           <p class="header-shop-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
@@ -118,13 +118,9 @@
       </section>
       <section class="popular-products container">
         <div class="popular-products-bar">
-          <h2>Популярные товары:</h2>
-          <a class="tipical-red-button" href="blank.html">Все популярные товары:</a>
+          <h2>Популярные товары: </h2>
+          <a class="tipical-red-button" href="blank.html">Все популярные товары: </a>
         </div> 
-        <!-- Вопрос наставнику. 
-        В обёркте ниже, после того как я сделал отдельный класс для контейнера и вынес в него
-        общие свойства, не понятно откуда появился margin-right: - 20px. 
-        Он выбивает блок из общего потока. Не могу понять откуда он взялся? -->
         <div class="popular-products-list-wrapper">
           <ul class="popular-products-list">
             <li class="popular-products-item">
@@ -243,38 +239,46 @@
           <div class="services-info-wripper">
             <h2>Сервисы</h2>
             <p>
-              Хороший интернет-магазин отличается от плохого не только ценами!
+              Хороший интернет-магазин отличается от плохого не только ценами! <br>
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
           </div>
-          <section class="services-button">
-            <ul class="services-button-list">
-              <li class="services-button-item">
-                <button  class="current" type="button">Доставка</button>
-              </li>
-              <li class="services-button-item">
-                <button type="button">Гарантия</button>
-              </li>
-              <li class="services-button-item">
-                <button type="button">Кредит</button>
-              </li>
-            </ul>
-          </section>
-          <div class="services-delivery-wripper">
-            <ul>
-              <li>
-                <h3>Доставка</h3>
-                <p>
-                  Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем, 
-                  поднимая его на ваш этаж!
-                </p>
-                <!-- Временно уменьшил картинку, чтобы помещалась в блок, оригинальный код закомитил -->
-                <!-- <img src="img/delivery-car.png" width="468" height="261" alt="Логотип машины доставки"> -->
-                <img src="img/delivery-car.png" width="234" height="130" alt="Логотип машины доставки">
-              </li>
-            </ul>
+          <div class="services-button-and-delivery-flex-wrapper">
+            <section class="services-button">
+              <ul class="services-button-list">
+                <li class="services-button-item">
+                  <button  class="current" type="button">Доставка</button>
+                </li>
+                <li class="services-button-item">
+                  <button type="button">Гарантия</button>
+                </li>
+                <li class="services-button-item">
+                  <button type="button">Кредит</button>
+                </li>
+              </ul>
+            </section>
+            <div class="services-delivery-wripper">
+              <ul>
+                <li>
+                  <h3>Доставка</h3>
+                  <!-- ? Ты говорила мне не использовать теги BR для разрыва строк в 
+                       ? этом месте. Как  тогда тут сверстать текст, чтобы были правильные
+                       ? переносы как в макете? Я пока могу только предположить
+                       ? что мне нужно создать DIV c размерами по тексту, как в макете и отцентрировать
+                       ? его относительно контейнера, или есть другие варианты, которые
+                       ? будут рассматриваться дальше в уроках?  -->
+                  <p>
+                    Мы с удовольствием доставим ваш товар прямо
+                    к вашему подъезду совершенно бесплатно!
+                    Ведь мы неплохо заработаем, 
+                    поднимая его на ваш этаж!
+                  </p>
+                  <!-- Временно уменьшил картинку, чтобы помещалась в блок, оригинальный код закомитил -->
+                  <!-- <img src="img/delivery-car.png" width="468" height="261" alt="Логотип машины доставки"> -->
+                  <img src="img/delivery-car.png" width="234" height="130" alt="Логотип машины доставки">
+                </li>
+              </ul>
+            </div>
           </div>  
         </section>
       </div>
@@ -282,11 +286,11 @@
         <section class="about-us">
           <h2 class="visually-hidden">О нас</h2>
           <p class="about-us-company-name">Компания «Техномарт»</p>
-          <p class="about-us-info">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+          <p class="about-us-info  first-paragraph">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
             ремонта и строительства не оставит равнодушными любителей сэкономить на 
             гастарбайтерах. 
           </p>
-          <p class="about-us-info">Мы можем доставить ваш товар в самые отдаленные точки России!
+          <p class="about-us-info second-paragraph">Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:
           </p>
           <ul class="about-us-list">
@@ -305,7 +309,7 @@
         <section class="contacts">
           <h2 class="visually-hidden">Мы на карте города</h2>
           <p class="contacts-header">Контакты</p>
-          <p class="contacts-info">Вы можете забрать товар сами, заехав в наш офис:</p>
+          <p class="contacts-info first-paragraph">Вы можете забрать товар сами, заехав в наш офис:</p>
           <!-- Здесь будет карта -->
           <a href="blank.html">
             <img src="img/map.png" width="300" height="158" alt="схематическая карта проезда">
@@ -398,11 +402,16 @@
     <!-- Форма обратной  связи -->
   
     <form class="popup-feedback" action="https://echo.htmlacademy.ru" method="post">
-      <label class="popup-feedback-description-text">Ваше имя:<input type="text" name="user-name" placeholder="Имя Фамилия"></label>
-      <label class="popup-feedback-description-email">Ваш e-mail:<input type="email" name="user-email" placeholder="email@example.com"></label>
-      <label class="popup-feedback-description">Текст письма:<textarea name="user-comment">В свободной форме</textarea></label>
-      <button class="tipical-red-button tipical-red-button-popup" type="submit">Отправить</button>
-      <button class="popup-close" type="button" ></button>
+      <div class="popup-feedback-top-bar"></div>
+      <div class="popup-feedback-container">
+        <label class="popup-feedback-description-text">Ваше имя:<input type="text" name="user-name" placeholder="Имя Фамилия"></label>
+        <label class="popup-feedback-description-email">Ваш e-mail:<input type="email" name="user-email" placeholder="email@example.com"></label>
+        <label class="popup-feedback-description">Текст письма:<textarea name="user-comment">В свободной форме</textarea></label>
+      </div>
+      <div class="popup-feedback-bottom-bar"> 
+        <button class="tipical-red-button tipical-red-button-popup" type="submit">Отправить</button>
+      </div>
+      <button class="popup-close visually-hidden" type="button" ></button>
     </form>
   </body>
 </html>
