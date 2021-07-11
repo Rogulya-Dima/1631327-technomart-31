@@ -37,15 +37,15 @@
         <p class="header-shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-phone-and-shop-addres-wrapper">
           <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-          <p class="header-shop-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+          <p class="header-shop-address">г.Санкт-Петербург, наб.Реки Карповки, 5 лит П</p>
         </div> 
         <section class="reg-user-section">
           <div class="reg-user-section-wrapper">
             <a href="blank.html"> 
-              <img src="img/symbols/icon-user.svg" width="20" height="18" alt="Лототип пользователя">
+              <img class="reg-user-section-logo" src="img/symbols/icon-user.svg" width="20" height="18" alt="Лототип пользователя">
               <p>Равшан Джамшутович</p>
             </a>
-            <a href="blank.html"> <img src="img/symbols/icon-logout.svg" width="20" height="18" alt="Выйти из личного кабинета"></a>
+            <a href="blank.html"> <img class="reg-user-section-log-out" src="img/symbols/icon-logout.svg" width="20" height="18" alt="Выйти из личного кабинета"></a>
           </div>
           <ul class="reg-user-section-list">
             <li><a href="blank.html">Мои заказы</a></li>
@@ -80,17 +80,21 @@
         </div>
         <div class="filters-sorting-perforators-list-and-pagination-wrapper container">
           <section class="filters">
-            <h2>Фильтр</h2>
+            <div class="filters-header-background-bar">
+              <h2>Фильтр</h2>
+            </div>
             <form action="https://echo.htmlacademy.ru" method="get">
               <fieldset>
-                <legend>Цена</legend>
-                <input type="range" min="0" max="30000" value="25000">
-                <input type="number" value="0"> -
+                <legend class="legend-price">Цена</legend>
+                <div class="filters-range-background-bar">
+                  <input type="range" min="0" max="30000" value="25000">
+                </div>
+                <input type="number" value="0"> - 
                 <input type="number" value="30000">
               </fieldset>
               <fieldset>
                 <legend>Производители</legend>
-                <ul>
+                <ul class="filters-manufacturers-list">
                   <li>
                     <label><input type="checkbox" name="BOSCH" checked>BOSCH</label>
                   </li>
@@ -110,7 +114,7 @@
               </fieldset>
               <fieldset>
                 <legend>Питание</legend>
-                <ul>
+                <ul class="filters-power-supply-list">
                   <li><label><input type="radio" name="power-supply" value="batteries">Аккумуляторные</label></li>
                   <li><label><input type="radio" name="power-supply" value="electricity-network">Сетевые</label></li>
                 </ul>
@@ -127,8 +131,8 @@
                 <li><button type="button" >ПО ФУНКЦИОНАЛУ</button></li>
               </ul>  
               <ul class="sorting-list-two">
-                <li><button class="current" type="button" >От меньшего к большему</button></li>
-                <li><button type="button" >От большего к меньшему</button></li>
+                <li><button class="current" type="button" >&#8593;</button></li>
+                <li><button type="button" >&#8595;</button></li>
               </ul>
             </section>
             <section>
@@ -263,11 +267,11 @@
             </section>
           </div>
           <section class="pagination">
-            <button type="button" disabled>Предыдущая</button>
-            <ul>
-              <li><a class="current">1</a></li>
-              <li><a href="blank.html">2</a></li>
-              <li><a href="blank.html">3</a></li>
+            <button class="visually-hidden" type="button" disabled>Предыдущая</button>
+            <ul class="pagination-list">
+              <li class="pagination-list-item"><a class="current">1</a></li>
+              <li class="pagination-list-item"><a href="blank.html">2</a></li>
+              <li class="pagination-list-item"><a href="blank.html">3</a></li>
             </ul>
             <button type="button">Следующая</button>
           </section>
@@ -276,8 +280,8 @@
           <section class="about-perforators container">
             <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
             <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-              Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
-              В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+              Существуют&nbsp;электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
+              В&nbsp;ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
             </p>
           </section>
         </div>
@@ -369,8 +373,8 @@
     <!-- Всплывающее окно -->
     
     <section class="popup-added-to-basket">
-      <div class="popup-red-bar"></div>
-      <div class="popup-img-and-text-wrapper">
+      <div class="popup-img-text-and-close-button-wrapper">
+        <button class="popup-close visually-hidden" type="button" ></button>
         <img src="img/symbols/popup-added-to-basket.svg" width="66" height="66" alt="">
         <p>Товар добавлен в корзину!</p>
       </div>
