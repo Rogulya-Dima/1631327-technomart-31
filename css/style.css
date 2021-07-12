@@ -746,23 +746,13 @@ margin-bottom: 30px;
   outline-offset: -5px;
   grid-column: 2/-1;
 }
-/*? Добавил каждому элементу списка свойство flex-grow: 1;, чтобы в случае переполнения
- контентом  (увеличение символов в названии) элемент меню выглядел нормально.
- Так же добавил перенос строки во флексе, в случае появления новых элементов
- в меню. Но при переносе строки из-за свойства justify-content: space-between
- последующие элементы не красиво выстраиваются. Для того чтобы элементы 
- прижимались к левой стороне последнему задал маржин авто. Так же  мне пришлось ограничить 
- максимальную ширину элемента (с запасом на переполнение контентом) только после этого список  
- стал выглядеть нормально при переносе на следующую строку. Такое решение приемлемо, или я 
- перемудрил?*/
 .site-sections-list {
   padding: 0;
   margin: 0;
   
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-
+  justify-content: flex-start;
 }
 .site-sections-list li {
   flex-grow: 1;
@@ -772,9 +762,6 @@ margin-bottom: 30px;
 
   margin-top: 37px;
   margin-bottom: 29px;
-}
-.site-sections-list li:last-child{
-  margin-right: auto;
 }
 .products-sections-list-wrapper {
   outline: 5px solid blue;
@@ -1154,25 +1141,21 @@ margin-bottom: 30px;
 }
 .filters-header-background-bar {
   display: block;
+  box-sizing: border-box;
+  padding: 10px 0;
   height: 38px;
   margin-bottom: 14px;
   background-color: var(--color-F7F3EC);
 }
 .filters h2 {
-  /* ?Если я правильно понимаю, для строчных елементнов margin top/bottom 
-  ?не работает, если мне нужно четко выставить отступы сверху/снизу от элемента
-  ?тогда мне нужно сделать его блочно-строчным. Или я не верно поступаю? */
-  display: inline-block;
-
   font-family:inherit;
   font-weight: inherit;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
 
+  margin: 0;
   margin-left: 18px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .filters fieldset {
   border: none;
@@ -1198,13 +1181,13 @@ margin-bottom: 30px;
 .filters [type="range"] {
   display: inline-block;
   margin: auto;
-  /* ?Лиза подскажи пожалуйста, есть ли способ такие элементы варавнивать автоматически 
+  /* ?Лиза подскажи пожалуйста, есть ли способ такие элементы выравнивать автоматически 
   ?по вертикали? Я не чего лучше не придумал, как только задать родителю
   ?,внутренний отступ. Если поставить для [type="range"] внешние отступы
-  ?то он выпадет из родителя (из серого фона), авто маржины вверх/вних не работают, остаеться только фиксированные 
+  ?то он выпадет из родителя (из серого фона), авто маржины вверх/вниз не работают, остается только фиксированные 
   ?значения из макета задавать. Есть ли способ чтобы родителю (в данном случае фоновая обертка), задать фиксированную
-  ?высоту, а дочерний элемент автоматически выровнять? Потому что мне кажеться как я 
-  ?сделал - это "костыль" получаеться!*/
+  ?высоту, а дочерний элемент автоматически выровнять? Потому что мне кажется как я 
+  ?сделал - это "костыль" получается!*/
 }
 
 .filters-manufacturers-list,
@@ -1375,7 +1358,6 @@ margin-bottom: 30px;
   line-height: 24px;
   text-align: left;
 
-  margin-left: 130px;
   padding-top: 64px;
 }
 .about-perforators h2 {
@@ -1385,11 +1367,13 @@ margin-bottom: 30px;
 
   margin: 0;
   padding: 0;
+  margin-left: 130px;
   margin-bottom: 25px;
 }
 .about-perforators p {
   margin: 0;
   padding: 0;
+  margin-left: 130px;
   margin-bottom: 67px;
 
   width: 907px;
@@ -1425,14 +1409,11 @@ margin-bottom: 30px;
 
   padding-top: 37px;
 }
-/* Вопрос наставнику:
-?Не могу понять почему у меня кнопка "оформить заказ" сдвинута ниже относительно 
-?кнопки "продолжить покупки", у родительского дива"popup-buttons-wrapper" задан 
-?паддинг топ, у дочерних элементов "оформить заказ" и "продолжить покупки" отступы
-?сверху обнулены. Подскажи пожалуйста, что у меня тут не так? */
 .popup-buttons-wrapper .tipical-red-button {
   display: inline-block;
   width: 192px;
+
+  vertical-align:bottom;
   
   padding-top: 0;
   margin-top: 0;
