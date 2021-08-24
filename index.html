@@ -59,7 +59,7 @@
         <ul class="main-navigation-list">
           <li class="main-navigation-item"><a>Главная</a></li>
           <li class="main-navigation-item"><a href="blank.html">Компания</a></li>
-          <li class="main-navigation-item"><a href="blank.html">Каталог</a></li>
+          <li class="main-navigation-item"><a href="catalog.html">Каталог</a></li>
           <li class="main-navigation-item"><a href="blank.html">Новости</a></li>
           <li class="main-navigation-item"><a href="blank.html">Спецпредложения</a></li>
           <li class="main-navigation-item"><a href="blank.html">Доставка</a></li>
@@ -106,15 +106,11 @@
                   <a href="blank.html" class="tipical-red-button">Открыть каталог</a>
                 </li>
               </ul>
-              <label class="promo-slider-button-back-label">
-                <button class="visually-hidden" type="button" aria-label="назад"></button>
-              </label>
-              <label class="promo-slider-button-next-label">
-                <button class="visually-hidden" type="button" aria-label="вперед"></button>
-              </label>
+              <button class="promo-slider-button-back" type="button" aria-label="назад"></button>
+              <button class="promo-slider-button-next" type="button" aria-label="вперед"></button>
               <div class="promo-slider--slide-activity-button">
-                <button class="activity-button active"></button>
-                <button class="activity-button "></button>
+                <button class="activity-button active" type="button"></button>
+                <button class="activity-button" type="button"></button>
               </div>
             </section>
           </article>
@@ -132,7 +128,7 @@
                 <div class="popular-products-item--img-container">
                   <img src="img/catalog/bosch-bfg-9000.jpg" width="184" height="164" alt="Большой перфоратор с питанием от сети">
                 </div>
-                <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp9000</p>
+                <p class="popular-products-text">Перфоратор BOSCH BFG&amp;9000</p>
                 <div class="product-item-price-container">
                   <del class="pass-through-text">32500 Р.</del>
                   <ins class="new-price">25500 Р.</ins>
@@ -148,7 +144,7 @@
                 <div class="popular-products-item--img-container">
                   <img src="img/catalog/bosch-bfg-3000.jpg" width="127" height="112" alt="Маленький перфоратор с питанием от аккумулятора">
                 </div>
-                <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp3000</p>
+                <p class="popular-products-text">Перфоратор BOSCH BFG&amp;3000</p>
                 <div class="product-item-price-container">
                   <del class="pass-through-text">22500 Р.</del>
                   <ins class="new-price">15500 Р.</ins>
@@ -164,7 +160,7 @@
                 <div class="popular-products-item--img-container">
                   <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
                 </div>
-                <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp6000</p>
+                <p class="popular-products-text">Перфоратор BOSCH BFG&amp;6000</p>
                 <div class="product-item-price-container">
                   <del class="pass-through-text">30500 Р.</del>
                   <ins class="new-price">25500 Р.</ins>
@@ -180,7 +176,7 @@
                 <div class="popular-products-item--img-container">
                   <img src="img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Маленький перфоратор с питанием от аккумулятора">
                 </div>
-                <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp2000</p>
+                <p class="popular-products-text">Перфоратор BOSCH BFG&amp;2000</p>
                 <div class="product-item-price-container">
                   <del class="pass-through-text">22500 Р.</del>
                   <ins class="new-price">12500 Р.</ins>
@@ -420,12 +416,12 @@
     <!-- Форма обратной  связи -->
        
       <form class="popup-feedback" action="https://echo.htmlacademy.ru" method="post">
-      <label class="popup-feedback-description-text">Ваше имя:<input type="text" name="user-name" placeholder="Имя Фамилия"></label>
-      <label class="popup-feedback-description-email">Ваш e-mail:<input type="email" name="user-email" placeholder="email@example.com"></label>
-      <!-- Не удалось в style.css задать высоту для textarea в пикселях,
-      только после того как написал стили в HTML все заработало.
-      Есть ли вариант сделать высоту textarea в style.css в пикселях? -->
-      <label class="popup-feedback-description">Текст письма:<textarea name="user-comment" style="height:100px">В свободной форме</textarea></label>
+      <label class="popup-feedback-description-text" for="user-name-input">Ваше имя:</label>
+      <label class="popup-feedback-description-email" for="user-email-input">Ваш e-mail:</label>
+      <input type="text" name="user-name" placeholder="Имя Фамилия" id="user-name-input">
+      <input type="email" name="user-email" placeholder="email@example.com" id="user-email-input">
+      <label class="popup-feedback-description" for="user-comment-textarea">Текст&nbsp;письма:</label>
+      <textarea name="user-comment" rows="5" id="user-comment-textarea">В свободной форме</textarea>
       <div class="popup-feedback-bottom-bar">
         <button class="tipical-red-button tipical-red-button-popup" type="submit">Отправить</button>
       </div>

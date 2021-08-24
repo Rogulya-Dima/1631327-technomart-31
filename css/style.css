@@ -1,12 +1,15 @@
 @font-face {
-  font-family:"Сuprum";
+  /* Лиза, наконец-то я разобрался со шрифтами, с самого момента, когда я их первый раз подключил, не мог понять
+  почему у меня они не правильно отображаются, хотя написание правила по шрифтам, проверял неоднократно!
+  Оказалост что в названии font-family:"Cuprum" буква С - была написана на русском языке и из за этого не чего не работало!!! */
+  font-family:"Cuprum";
   font-weight: 400;
   font-style: normal;
   src: url("../fonts/cuprum.woff2") format("woff2"),
        url("../fonts/cuprum.woff") format("woff");
 }
 @font-face {
-  font-family:"Сuprum";
+  font-family:"Cuprum";
   font-weight: 700;
   font-style: normal;
   src: url("../fonts/cuprumbold.woff2") format("woff2"), 
@@ -186,8 +189,12 @@ ul {
 
   display: inline-block;
 }
-.main-header-logo:active,
-.main-footer-logo:active {
+.logo-wrapper:active,
+.main-footer-logo-wrapper:active {
+  background-color: var(--error);
+}
+.logo-wrapper:active .main-header-logo,
+.main-footer-logo-wrapper:active .main-footer-logo {
   background-color: var(--error);
 }
 .main-header-logo {
@@ -475,6 +482,7 @@ ul {
   padding: 0 23px;
 
   background-color: var(--color-32425C);
+  box-shadow: inset 0px -5px 0px #293449;
  
   display: flex;
   flex-wrap: wrap;
@@ -653,7 +661,7 @@ ul {
 .promo-article-item .tipical-red-button:active {
   background-color: var(--error);
 }
-.promo-slider-button-back-label{
+.promo-slider-button-back{
   width: 22px;
   height: 40px;
   position: absolute;
@@ -662,9 +670,11 @@ ul {
   background-image: url(../img/symbols/icon-left.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
-.promo-slider-button-next-label{
+.promo-slider-button-next{
   width: 22px;
   height: 40px;
   position: absolute;
@@ -673,6 +683,8 @@ ul {
   background-image: url(../img/symbols/icon-left.svg);
   background-repeat: no-repeat;
   transform:rotate(180deg);
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 .promo-slider--slide-activity-button {
@@ -1056,10 +1068,16 @@ margin-bottom: 30px;
   position: absolute;
   width: 10px;
   height: 279px;
-  left: 230px;
+  left: 231px;
   top: 0;
   margin-top: -45px;
-  background-image: url(../img/symbols/Object.png);
+  /* Можешь объяснить почему тут должно быть СВГ?
+  Плюсы СВГ в масштабируемости без изменения качества.
+  Но это не иконка и не логотип. Картинка статична, 
+  через ЦСС ее оживлять не нужно, весит ПНГ в 3 раза меньше 
+  чем СВГ.
+   */
+  background-image: url(../img/symbols/line.svg);
   background-repeat: no-repeat;
   background-position: 0 0; 
 }
@@ -1372,39 +1390,47 @@ margin-bottom: 30px;
   width: 620px;
   height: 7px;
 
-  margin-bottom: 39px;
+  margin-bottom: 27px;
 
   background-color: var(--basic-red);
 }
 .popup-feedback-description-text {
-  display: flex;
-  flex-direction: column;
-  
   margin-left: 80px;
-  margin-right: 20px;
+  margin-bottom: 11px;
 }
 .popup-feedback-description-email {
-  display: flex;
-  flex-direction: column;
+  margin-left: 167px;
+  margin-bottom: 11px;
+}
+.popup-feedback input[type=text] {
+  margin-left: 80px;
+  margin-bottom: 13px;
+}
+.popup-feedback input[type=email] {
+  margin-left: 20px;
+  margin-bottom: 13px;
 }
 .popup-feedback-description {
+  margin-left: 80px;
+  margin-right: 100%;
+  margin-bottom: 11px;
+}
+.popup-feedback [name="user-comment"] {
   width: 460px;
   margin: 0 auto;
   margin-bottom: 37px;
-
-  display: flex;
-  flex-direction: column;
+  border: 2px solid var(--basic-greylight);
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 .popup-feedback input[type=text],
 .popup-feedback input[type=email] {
-  margin: 0;
   padding: 0;
-  margin-bottom: 12px;
-
-  box-sizing: border-box;
-
   width: 220px;
   height: 38px;
+  border: 2px solid var(--basic-greylight);
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 .popup-feedback input[type=text]::placeholder,
 .popup-feedback input[type=email]::placeholder,
