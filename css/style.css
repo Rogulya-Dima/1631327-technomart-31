@@ -1,7 +1,4 @@
 @font-face {
-  /* Лиза, наконец-то я разобрался со шрифтами, с самого момента, когда я их первый раз подключил, не мог понять
-  почему у меня они не правильно отображаются, хотя написание правила по шрифтам, проверял неоднократно!
-  Оказалост что в названии font-family:"Cuprum" буква С - была написана на русском языке и из за этого не чего не работало!!! */
   font-family:"Cuprum";
   font-weight: 400;
   font-style: normal;
@@ -121,6 +118,10 @@ img {
 }
 ul {
   list-style:none;
+}
+button {
+  padding: 0;
+  margin: 0;
 }
 .tipical-red-button {
   font-size: 14px;
@@ -406,6 +407,14 @@ ul {
   margin-bottom: 10px;
   padding-left: 30px;
 }
+.header-phone:hover::after,
+.header-phone:focus::after {
+  border-color: var(--transparency-black);
+}
+.header-phone:active::after {
+  border-color: var(--basic-red);
+  opacity: 0.7;
+}
 .header-shop-address {
   font-size: 14px;
 
@@ -673,9 +682,6 @@ ul {
   position: absolute;
   top: 122px;
   left: 24px;
-  background-image: url(../img/symbols/icon-left.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -686,12 +692,20 @@ ul {
   position: absolute;
   top: 122px;
   right: 24px;
-  background-image: url(../img/symbols/icon-left.svg);
-  background-repeat: no-repeat;
   transform:rotate(180deg);
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.promo-slider-button-back:hover path,
+.promo-slider-button-back:focus path,
+.promo-slider-button-next:hover path,
+.promo-slider-button-next:focus path {
+  fill: var(--basic-black);
+}
+.promo-slider-button-back:active path,
+.promo-slider-button-next:active path {
+  fill: var(--transparency-black);
 }
 .promo-slider--slide-activity-button {
   width: 32px;
@@ -713,6 +727,14 @@ ul {
 }
 .activity-button.active {
   background-color: var(--basic-red);
+}
+.activity-button:hover,
+.activity-button:focus {
+  border-color: var(--basic-black);
+}
+.activity-button:active {
+  background-color: var(--basic-red);
+  border-color: var(--basic-white);
 }
 /* index.html-popular and catalog.html-perforators-list*/
 .popular-products-bar,
@@ -780,12 +802,6 @@ ul {
   justify-content: center;
   border: 1px solid var(--border-color-basic);
 }
-/*Если вдруг будут загружаться фотографии разных размеров
-(у меня в проекте они тоже разные),
-для того чтобы не нарушать размещение в потоке последующих 
-элементов в списке, решил сделать контейнер для фотографий, в котором 
-отцентрировал загружаемые img флексом, а для img задал максимальные размеры.
-Скажи такое решение используется в индустрии, или я что-то перемудрил? */
 .popular-products-item--img-container,
 .perforators-list-item--img-container {
   width: 184px;
@@ -1431,20 +1447,35 @@ margin-bottom: 30px;
 }
 .popup-feedback [name="user-comment"] {
   width: 460px;
+  padding-left: 12px;
   margin: 0 auto;
   margin-bottom: 37px;
   border: 2px solid var(--basic-greylight);
   box-sizing: border-box;
   border-radius: 2px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
 }
+
 .popup-feedback input[type=text],
 .popup-feedback input[type=email] {
   padding: 0;
+  padding-left: 12px;
   width: 220px;
   height: 38px;
   border: 2px solid var(--basic-greylight);
   box-sizing: border-box;
   border-radius: 2px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
 }
 .popup-feedback input[type=text]::placeholder,
 .popup-feedback input[type=email]::placeholder,
@@ -1454,9 +1485,6 @@ margin-bottom: 30px;
   font-size: 13px;
   line-height: 24px;
   color: var(--color-A9A9A9);
-}
-.popup-feedback [name="user-comment"]:focus {
-  color: var(--basic-black);
 }
 .popup-feedback input[type=text]::-webkit-input-placeholder,
 .popup-feedback input[type=email]::-webkit-input-placeholder {
@@ -1674,8 +1702,23 @@ opacity: 0.3;
   text-transform: uppercase;
   color: var(--basic-black);
 }
+.breadcrumbs-list a:hover,
+.breadcrumbs-list a:focus {
+  text-decoration: underline;
+}
+.breadcrumbs-list .home:hover path,
+.breadcrumbs-list .home:focus path{
+  fill: var(--basic-black);
+}
+.breadcrumbs-list .home:active path{
+  fill: var(--color-CA2C37);
+}
+.breadcrumbs-list a:active {
+  color: var(--color-CA2C37);
+}
 .perforators-heading-wrapper {
   height: 89px;
+  padding: 0;
   margin-bottom: 20px;
   background-color: var(--basic-background);
 }
@@ -1862,11 +1905,6 @@ opacity: 0.3;
 .filters-power-supply-list-item-label  .radio-on {
   display: none;
 }
-/* Если я правильно понимаю, при использовании псевдоклассов, таких как ховер, фокус, эктив, чекед и тд...
-С помощью ЦСС мы можем влиять только на те элементы, которые являються родственными или потомками элементов
-с псевдоклассами.
-Есть возможность с помощью чистого CSS влиять на элементы которые не являются родственными, 
-или потомками тех элементов которым мы задаем псевдоклассы? */
 .filters-manufacturers-list-item-input:checked+.filters-manufacturers-list-item-label>.checkbox-off,
 .filters-power-supply-list-item-input:checked+.filters-power-supply-list-item-label>.radio-off {
   display: none;
@@ -1905,6 +1943,7 @@ opacity: 0.3;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  color: var(--basic-black);
   background-color: transparent;
 
   display: block;
@@ -1914,9 +1953,11 @@ opacity: 0.3;
 }
 .filters [type="submit"]:hover,
 .filters [type="submit"]:focus {
+  color: var(--basic-black);
   border-color: var(--basic-black);
 }
 .filters [type="submit"]:active {
+  color: var(--basic-black);
   border-color: var(--basic-red);
 }
 /* sorting */
@@ -1937,7 +1978,7 @@ opacity: 0.3;
 
   padding: 10px 0;
   margin: 0;
-  margin-right: 130px;
+  margin-right: 140px;
   margin-left:20px;
 }
 .sorting button {
@@ -1951,11 +1992,11 @@ opacity: 0.3;
   display: flex;
   flex-wrap: wrap;
   width: 380px;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .sorting-list--price-type-functional li {
   margin: 0;
-  margin-right: 60px;
+  margin-right: 70px;
   padding: 0px;
 }
 .sorting-list--price-type-functional li:last-child {
@@ -1963,29 +2004,10 @@ opacity: 0.3;
 }
 .sorting-list-priority {
   display: flex;
-  justify-content: flex-start;
-  flex-grow: 1;
-  position: relative;
-} 
-.sorting-list-priority-button{
-  width: 12px;
-  height: 10px;
-}
-.sorting-list-priority-button.min-to-max {
-  position: absolute;
-  top: 0;
-  left: 11px;
-}
-.sorting-list-priority-button.max-to-min {
-  position: absolute;
-  bottom: -1px;
-  left: 30px;
-}
-.sorting-list-priority li {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-}
+  flex-grow: 1;
+} 
 .sorting-list-priority-button.current path {
   fill: var(--basic-red);
 }
@@ -2001,7 +2023,7 @@ opacity: 0.3;
 }
 .sorting ul {
   margin: 0;
-  margin-right: 25px;
+  margin-right: 20px;
   padding: 0;
 }
 .sorting button {
@@ -2085,9 +2107,10 @@ opacity: 0.3;
   background-color:var(--basic-white);
 }
 .pagination .current:active a {
-   color: var(--basic-black);
+  color: var(--basic-black);
 }
 .pagination button {
+  color: var(--basic-black);
   border: 1px solid #E5E5E5;
   border-radius: 2px;
   background-color: transparent;
@@ -2096,16 +2119,18 @@ opacity: 0.3;
   height: 38px;
   text-transform: uppercase;
  } 
- .pagination-list-item:hover,
- .pagination-list-item:focus,
- .pagination button:hover,
- .pagination button:focus {
-   border-color: var(--basic-greylight);
- }
- .pagination-list-item:active,
- .pagination button:active {
-   border-color: var(--basic-red);
- }
+.pagination-list-item:hover,
+.pagination-list-item:focus,
+.pagination button:hover,
+.pagination button:focus {
+  color: var(--basic-black);
+  border-color: var(--basic-greylight);
+}
+.pagination-list-item:active,
+.pagination button:active {
+  color: var(--basic-black);
+  border-color: var(--basic-red);
+}
 
 /* about perforators */
 .about-perforators-bar {
@@ -2223,9 +2248,6 @@ opacity: 0.3;
   width: 21px;
   height: 21px;
 
-  background-image: url(../img/symbols/icon-close.svg );
-  background-repeat: no-repeat;
-  background-position: 0 0;
   border: none;
 }
 .popup-feedback .popup-close {
@@ -2236,4 +2258,15 @@ opacity: 0.3;
   font-size: 14px;
   line-height: 18px;
   background-color: var(--basic-white);
+}
+
+.popup-feedback .popup-close:hover path,
+.popup-feedback .popup-close:focus path,
+.popup-added-to-basket .popup-close:hover path,
+.popup-added-to-basket .popup-close:focus path {
+  fill: var(--color-CA2C37);
+}
+.popup-feedback .popup-close:active path,
+.popup-added-to-basket .popup-close:active path {
+  fill: var(--error);
 }
