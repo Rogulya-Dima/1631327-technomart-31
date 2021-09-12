@@ -1241,7 +1241,7 @@ margin-bottom: 30px;
   z-index: 1;
 
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-  display: none;
+  /* display: none; */
 }
 .modal-map-container::before {
   content: "";
@@ -1564,7 +1564,8 @@ margin-bottom: 30px;
   border: none;
   cursor: pointer;
 }
-.popup-feedback .popup-close {
+.popup-feedback .popup-close,
+.modal-map-container .popup-close{
   position: absolute;
   top: 21px;
   right: 11px;
@@ -2204,10 +2205,14 @@ opacity: 0.3;
   width: 620px;
   height: 282px;
   margin: 0 auto;
+
+  background-image:url(../img/symbols/popup-added-to-basket.svg);
+  background-position: 81px 48px;
+  background-repeat: no-repeat;
   
   box-shadow: 0px 20px 40px rgba(41, 52, 73, 0.75);
   
-  /* display: none; */
+  display: grid;
   grid-template-rows: 7px 1fr 112px;
   background-color: var(--basic-white);
 
@@ -2223,14 +2228,6 @@ opacity: 0.3;
   width: 100%;
   height: 7px;
   background-color: var(--basic-red);
-}
-.popup-added-to-basket {
-  width: 100%;
-  background-image:url(../img/symbols/popup-added-to-basket.svg);
-  background-position: 81px 48px;
-  background-repeat: no-repeat;
- 
-  position: relative;
 }
 .popup-text {
   width: 421px;
@@ -2266,8 +2263,8 @@ opacity: 0.3;
   outline: 1px solid var(--basic-red);
   outline-offset: -1px;
 }
-.popup-added-to-basket button,
-.popup-feedback .popup-close {
+.popup-added-to-basket .popup-close,
+.popup-feedback {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -2297,10 +2294,13 @@ opacity: 0.3;
 .popup-feedback .popup-close:hover path,
 .popup-feedback .popup-close:focus path,
 .popup-added-to-basket .popup-close:hover path,
-.popup-added-to-basket .popup-close:focus path {
+.popup-added-to-basket .popup-close:focus path,
+.modal-map-container .popup-close:hover path,
+.modal-map-container .popup-close:focus path{
   fill: var(--color-CA2C37);
 }
 .popup-feedback .popup-close:active path,
-.popup-added-to-basket .popup-close:active path {
+.popup-added-to-basket .popup-close:active path,
+.modal-map-container .popup-close:active path {
   fill: var(--error);
 }
