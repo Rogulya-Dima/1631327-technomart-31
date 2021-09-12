@@ -29,7 +29,7 @@
           </form>
           <section class="order-section">
             <ul class="order-section-list">
-              <li class="order-section-item"><a href="blank.html" class="bookmarks">Закладки:0</a></li>
+              <li class="order-section-item"><a href="blank.html" class="bookmarks">Закладки: 0</a></li>
               <li class="order-section-item"><a href="blank.html" class="basket basket-full">Корзина: 10</a></li>
               <li class="order-section-item"><a href="blank.html" class="сheckout">Оформить заказ</a></li>
             </ul>
@@ -40,7 +40,7 @@
         <p class="header-shop-description">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
         <div class="header-phone-and-shop-addres-wrapper">
           <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-          <p class="header-shop-address">г.Санкт-Петербург, наб.Реки Карповки, 5 лит П</p>
+          <p class="header-shop-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         </div> 
         <section class="reg-user-section">
           <div class="reg-user-section-wrapper">
@@ -50,7 +50,7 @@
               </svg>
               <p>Равшан Джамшутович</p>
             </a>
-            <a class="reg-user-section-log-out-link" href="blank.html">
+            <a class="reg-user-section-log-out-link" href="blank.html" aria-label="выйти из личного кабинета">
               <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5"/>
                 <path d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z" fill="#C5C5C5"/>
@@ -110,6 +110,7 @@
                           margin-left:0%;
                           width: 84%; "></div>
                     </div>
+                    <!-- нужен ли нижестоящим дивам Ариа-лейбл? -->
                     <div class="toggle toggle-min" tabindex="0"
                       style="left: 8.5%;">
                     </div>
@@ -119,12 +120,12 @@
                 </div>
                 <div class="price-controls">
                   <input class="min-price-input" type="number" value="0">
-                  <span>-</span> 
+                  <span>&ndash;</span>
                   <input class="max-price-input" type="number" value="30000">
                 </div>
               </fieldset>
               <fieldset class="filters-manufacturers-fieldset">
-                <legend>Производители</legend>
+                <legend>Производители:</legend>
                 <ul class="filters-manufacturers-list">
                   <li class="filters-manufacturers-list-item">
                     <input class="filters-manufacturers-list-item-input visually-hidden" type="checkbox" name="BOSCH" id="filter-checkbox-BOSCH" checked>
@@ -237,14 +238,14 @@
               </ul>  
               <ul class="sorting-list-priority">
                 <li>
-                  <button class="sorting-list-priority-button min-to-max current" type="button" >
+                  <button class="sorting-list-priority-button min-to-max current" type="button"  aria-label="сортировка от меньшего к большему">
                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
                     </svg>
                   </button>
                 </li>
                 <li>
-                  <button class="sorting-list-priority-button max-to-min" type="button" >
+                  <button class="sorting-list-priority-button max-to-min" type="button" aria-label="сортировка от большего к меньшему">
                     <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
                     </svg>
@@ -256,148 +257,145 @@
               <h2 class="visually-hidden">Каталог перфораторов</h2>
               <ul class="perforators-list">
                 <li class="perforators-list-item">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
-                    <div class="product-item-price-container">
-                      <del class="pass-through-text">30500 Р.</del>
-                      <ins class="new-price">25500 Р.</ins>
-                    </div>
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
+                  <div class="product-item-price-container">
+                    <del class="pass-through-text">30500 Р.</del>
+                    <ins class="new-price">25500 Р.</ins>
+                  </div>
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
-                    <div class="product-item-price-container">
-                      <del class="pass-through-text">30500 Р.</del>
-                      <ins class="new-price">25500 Р.</ins>
-                    </div>
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
+                  <div class="product-item-price-container">
+                    <del class="pass-through-text">30500 Р.</del>
+                    <ins class="new-price">25500 Р.</ins>
+                  </div>
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item new">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
-                    <div class="product-item-price-container">
-                      <del class="pass-through-text">30500 Р.</del>
-                      <ins class="new-price">25500 Р.</ins>
-                    </div>
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
+                  <div class="product-item-price-container">
+                    <del class="pass-through-text">30500 Р.</del>
+                    <ins class="new-price">25500 Р.</ins>
+                  </div>
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item new">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-3000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;3000</p>
-                    <div class="product-item-price-container">
-                      <del class="pass-through-text">22500 Р.</del>
-                      <ins class="new-price">15500 Р.</ins>
-                    </div> 
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-3000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;3000</p>
+                  <div class="product-item-price-container">
+                    <del class="pass-through-text">22500 Р.</del>
+                    <ins class="new-price">15500 Р.</ins>
+                  </div> 
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
-                    <div class="product-item-price-container">
-                      <del class="pass-through-text">30500 Р.</del>
-                      <ins class="new-price">25500 Р.</ins>
-                    </div>
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
+                  <div class="product-item-price-container">
+                    <del class="pass-through-text">30500 Р.</del>
+                    <ins class="new-price">25500 Р.</ins>
+                  </div>
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item new">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;2000</p>
-                    <div class="product-item-price-container">
-                      <p class="new-price">12500 Р.</p>
-                    </div>
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;2000</p>
+                  <div class="product-item-price-container">
+                    <p class="new-price">12500 Р.</p>
+                  </div>
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item new">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-3000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;3000</p>
-                    <div class="product-item-price-container">
-                      <del class="pass-through-text">22500 Р.</del>
-                      <ins class="new-price">15500 Р.</ins>
-                    </div> 
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-3000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;3000</p>
+                  <div class="product-item-price-container">
+                    <del class="pass-through-text">22500 Р.</del>
+                    <ins class="new-price">15500 Р.</ins>
+                  </div> 
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
-                    <div class="product-item-price-container">
-                      <del class="pass-through-text">30500 Р.</del>
-                      <ins class="new-price">25500 Р.</ins>
-                    </div>
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор среднего размера с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;6000</p>
+                  <div class="product-item-price-container">
+                    <del class="pass-through-text">30500 Р.</del>
+                    <ins class="new-price">25500 Р.</ins>
+                  </div>
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
                 <li class="perforators-list-item new">
-                  <a href="blank.html">
-                    <div class="perforators-list-item--img-container">
-                      <img src="img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
-                    </div>
-                    <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;2000</p>
-                    <div class="product-item-price-container">
-                      <p class="new-price">12500 Р.</p>
-                    </div>
-                  </a>
+                  <div class="perforators-list-item--img-container">
+                    <img src="img/catalog/bosch-bfg-2000.jpg" width="127" height="112" alt="Маленкий перфоратор с питанием от аккумулятора">
+                  </div>
+                  <p class="perforators-item-text">Перфоратор BOSCH BFG&nbsp;2000</p>
+                  <div class="product-item-price-container">
+                    <p class="new-price">12500 Р.</p>
+                  </div>
                   <div class="perforators-list-button-container">
                     <button class="perforators-list-button buy" type="button">Купить</button>
                     <button class="perforators-list-button to-bookmarks" type="button">В закладки</button>
                   </div>
                 </li>
               </ul>
+            </section>
+            <!-- Всплывающее окно -->
+            <section class="popup-added-to-basket">
+              <div class="popup-img-text-and-close-button-wrapper">
+                <button class="popup-close" type="button">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
+                  </svg>
+                </button>
+                <p>Товар добавлен в корзину!</p>
+              </div>
+              <div class="popup-buttons-wrapper">
+                <a class="tipical-red-button" href="blank.html">ОФОРМИТЬ ЗАКАЗ</a>
+                <button type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+              </div>
             </section>
           </div>
           <section class="pagination">
@@ -413,7 +411,7 @@
         <div class="about-perforators-bar">
           <section class="about-perforators container">
             <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-            <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+            <p>Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
               Существуют&nbsp;электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
               В&nbsp;ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
             </p>
@@ -424,11 +422,11 @@
     <footer class="main-footer">
       <section class="footer-navigation container">
         <h2 class="visually-hidden">Ссылки на основные разделы сайта</h2>
-        <a href="index.html">
-          <div class="main-footer-logo-wrapper">
+        <div class="main-footer-logo-wrapper">
+          <a href="index.html">
             <img class="main-footer-logo" src="img/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт">
-          </div>
-        </a>
+          </a>
+        </div>
         <div class="site-sections-list-wrapper">
           <ul class="site-sections-list">
             <li>
@@ -466,7 +464,7 @@
         </div>
         <section class="footer-contacts">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="footer-contacts-description">г.Санкт-Петербург, наб.Реки Карповки, 5 лит П</p> 
+          <p class="footer-contacts-description">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p> 
           <a  class="footer-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         </section>
       </section>
@@ -498,28 +496,10 @@
           </section>  
           <section class="feedback">
             <p>Обратная связь: <a href=" mailto:mail@htmlacademy.ru ">mail@htmlacademy.ru</a></p>
-            <p>Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">htmlacademy.ru</a></p>
+            <p>Разработано &ndash; <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">htmlacademy.ru</a></p>
           </section>
         </div>
       </div>
     </footer>>
-        
-    <!-- Всплывающее окно -->
-    
-    <section class="popup-added-to-basket">
-      <div class="popup-img-text-and-close-button-wrapper">
-        <button class="popup-close" type="button">
-          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
-          </svg>
-        </button>
-        <p>Товар добавлен в корзину!</p>
-      </div>
-      <div class="popup-buttons-wrapper">
-        <a class="tipical-red-button" href="blank.html">ОФОРМИТЬ ЗАКАЗ</a>
-        <button type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
-      </div>
-    </section>
   </body>
-  
 </html>

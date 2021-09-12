@@ -35,10 +35,10 @@
         </div>
       </div>
       <div class="header-shop-description-phone-addres-and-user-section-wrapper container">
-        <p class="header-shop-description">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
+        <p class="header-shop-description">Интернет&#8209;магазин строительных материалов и&nbsp;инструментов для ремонта</p>
         <div class="header-phone-and-shop-addres-wrapper">
-          <a class="header-phone" href="tel:+78005558628">+7 800 555-86-28</a>
-          <p class="header-shop-address">г. Санкт-Петербург, наб.Реки Карповки, 5 лит П</p>
+          <a class="header-phone" href="tel:+78005558628"><nobr>+7 800 555-86-28</nobr></a>
+          <p class="header-shop-address">г.&nbsp;Санкт&#8209;Петербург, наб.&nbsp;Реки Карповки, 5&nbsp;лит&nbsp;П</p>
         </div> 
         <section class="unreg-user-section">
           <ul class="unreg-user-section-list">
@@ -330,6 +330,23 @@
           </a>
           <a class="tipical-red-button" href="">Заблудились? Напишите нам!</a>
         </section>
+        <!-- Форма обратной  связи -->
+        <form class="popup-feedback" action="https://echo.htmlacademy.ru" method="post">
+          <label class="popup-feedback-description-text" for="user-name-input">Ваше имя:</label>
+          <label class="popup-feedback-description-email" for="user-email-input">Ваш e-mail:</label>
+          <input type="text" name="user-name" placeholder="Имя Фамилия" id="user-name-input">
+          <input type="email" name="user-email" placeholder="email@example.com" id="user-email-input">
+          <label class="popup-feedback-description" for="user-comment-textarea">Текст&nbsp;письма:</label>
+          <textarea name="user-comment" rows="5" id="user-comment-textarea">В свободной форме</textarea>
+          <div class="popup-feedback-bottom-bar">
+            <button class="tipical-red-button tipical-red-button-popup" type="submit">Отправить</button>
+          </div>
+          <button class="popup-close" type="button" aria-label="закрыть">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
+            </svg>
+          </button>
+        </form>
       </div>
     </main>
     <footer class="main-footer">
@@ -412,24 +429,5 @@
         </div>
       </div>
     </footer>
-        
-    <!-- Форма обратной  связи -->
-       
-      <form class="popup-feedback" action="https://echo.htmlacademy.ru" method="post">
-      <label class="popup-feedback-description-text" for="user-name-input">Ваше имя:</label>
-      <label class="popup-feedback-description-email" for="user-email-input">Ваш e-mail:</label>
-      <input type="text" name="user-name" placeholder="Имя Фамилия" id="user-name-input">
-      <input type="email" name="user-email" placeholder="email@example.com" id="user-email-input">
-      <label class="popup-feedback-description" for="user-comment-textarea">Текст&nbsp;письма:</label>
-      <textarea name="user-comment" rows="5" id="user-comment-textarea">В свободной форме</textarea>
-      <div class="popup-feedback-bottom-bar">
-        <button class="tipical-red-button tipical-red-button-popup" type="submit">Отправить</button>
-      </div>
-      <button class="popup-close" type="button">
-        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
-        </svg>
-      </button>
-    </form>
   </body>
 </html>
