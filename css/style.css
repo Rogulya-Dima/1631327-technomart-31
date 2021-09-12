@@ -407,8 +407,7 @@ button {
   display: block;
 
   margin-bottom: 10px;
-  padding-left: 75px;
-  width: 29px;
+  padding-left: 26px;
 }
 .header-phone:hover::after,
 .header-phone:focus::after {
@@ -437,6 +436,7 @@ button {
 }
 .unreg-user-section-item {
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 .unreg-user-section-item-login {
   width: 120px;
@@ -508,7 +508,6 @@ button {
 .main-navigation-item {
   display: inline-block;
 
-  max-width: 170px;
   min-width: 100px;
   height: 60px;
 
@@ -758,7 +757,7 @@ button {
 .popular-products-list {
    display: grid;
    grid-template-columns: repeat(4,220px);
-   grid-template-rows: 318px;
+   grid-template-rows: 1fr;
    gap: 20px;
    margin: 0;
    padding: 0;
@@ -861,7 +860,7 @@ button {
   display: block;
   box-sizing: border-box;
   width: 192px;
-  height: 38px;
+  min-height: 38px;
 
   padding: 10px 23px;
   margin-top: 25px;
@@ -1041,7 +1040,7 @@ button {
   background-image: url(../img/services/delivery.png);
   background-repeat: no-repeat;
   background-position: 151px 19px;
-  height: 170px;
+  min-height: 170px;
 }
 .services-description-item-guaranty {
   background-image: url(../img/services/guaranty.png);
@@ -1052,7 +1051,7 @@ button {
   background-image: url(../img/services/credit.png);
   background-repeat: no-repeat;
   background-position: 155px 0;
-  height: 198px;
+  min-height: 198px;
 }
 .services-description-item-credit button {
   width: 195px;
@@ -1127,7 +1126,7 @@ margin-bottom: 30px;
   border: none;
   
   width: 240px;
-  height: 61px;
+  min-height: 61px;
   padding-left: 20px;
 
   font-size: 21px;
@@ -1166,6 +1165,7 @@ margin-bottom: 30px;
 .about-us-and-contacts-wrapper {
   margin-bottom: 70px;
   display: flex;
+  position: relative;
 }
 .about-us {
   width: 450px;
@@ -1183,9 +1183,9 @@ margin-bottom: 30px;
 }
 .about-us-list li::before {
   content: "";
-  position: absolute;
   width: 25px;
   height: 2px;
+  position: absolute;
   left: 0;
   top: 50%;
   margin-top: -1px;
@@ -1230,6 +1230,26 @@ margin-bottom: 30px;
 }
 .contacts .tipical-red-button{
   width: 100%;
+}
+.about-us-and-contacts-wrapper .modal-map-container {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+.modal-map-container::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 7px;
+  background-color: var(--basic-red);
+  z-index: 1;
 }
 
 /* footer */
@@ -1280,15 +1300,15 @@ margin-bottom: 30px;
   
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:flex-start;
 }
 .site-sections-list li {
-  /* max-width: 120px; */
   margin-top: 37px;
   margin-bottom: 29px;
+  margin-right: 57px;
 }
-.site-sections-list li:first-child {
-  padding-left: 0px;
+.site-sections-list li:last-child {
+  margin-right: 0;
 }
 .products-sections-list-wrapper {
   grid-column: 2/-1;
@@ -1300,19 +1320,17 @@ margin-bottom: 30px;
   
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .products-sections-list li {
   margin-bottom: 74px;
-  margin-left: 22px;
-  /* max-width: 170px; */
+  margin-right: 58px;
 }
-/* .products-sections-list li:first-child {
-  padding-left: 0;
-} */
-/* .products-sections-list li:last-child {
-  margin-right: auto;
-} */
+.products-sections-list li:last-child {
+  margin-right: 0;
+}
+.products-sections-list li:first-child {
+  margin-left: 22px;
+}
 .footer-contacts{
   grid-column: 1/2;
   grid-row: 2/3;
@@ -1350,7 +1368,7 @@ margin-bottom: 30px;
 .feedback p{
   margin-right: 50px;
 }
-.feedback p:last-child{
+.feedback p:last-child {
   margin-right: 0;
 }
 .copyright p,
@@ -1375,15 +1393,15 @@ margin-bottom: 30px;
 .copyright a:hover,
 .copyright a:focus,
 .feedback a:hover,
-.feedback a:focus{
+.feedback a:focus {
   text-decoration: underline;
 }
 .copyright a:active,
-.feedback a:active{
+.feedback a:active{ 
   text-decoration: none;
   color: var(--basic-red);
 }
-.socials-list {
+ .socials-list {
   margin: 0;
   padding: 0;
   margin-right: 118px;
@@ -2031,7 +2049,7 @@ opacity: 0.3;
 .sorting-list-priority-button:active path {
   fill: var(--basic-red);
 }
-.sorting-list-priority-button.min-to-max{
+.sorting-list-priority-button.min-to-max {
   transform: rotate(180deg);
 }
 .sorting ul {
@@ -2187,11 +2205,9 @@ opacity: 0.3;
   height: 282px;
   margin: 0 auto;
   
-  /* нужно ли цвет тени выносить в переменные, 
-  если он используеться лишь в одном месте? */
   box-shadow: 0px 20px 40px rgba(41, 52, 73, 0.75);
   
-  display: none;
+  /* display: none; */
   grid-template-rows: 7px 1fr 112px;
   background-color: var(--basic-white);
 
@@ -2199,6 +2215,7 @@ opacity: 0.3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 .popup-added-to-basket::before {
   content: "";
@@ -2207,7 +2224,7 @@ opacity: 0.3;
   height: 7px;
   background-color: var(--basic-red);
 }
-.popup-img-text-and-close-button-wrapper {
+.popup-added-to-basket {
   width: 100%;
   background-image:url(../img/symbols/popup-added-to-basket.svg);
   background-position: 81px 48px;
@@ -2215,7 +2232,7 @@ opacity: 0.3;
  
   position: relative;
 }
-.popup-img-text-and-close-button-wrapper p {
+.popup-text {
   width: 421px;
   margin: 66px 0px;
   margin-left: 175px;
@@ -2249,7 +2266,7 @@ opacity: 0.3;
   outline: 1px solid var(--basic-red);
   outline-offset: -1px;
 }
-.popup-img-text-and-close-button-wrapper button,
+.popup-added-to-basket button,
 .popup-feedback .popup-close {
   font-weight: 400;
   font-size: 14px;
