@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -137,8 +137,8 @@
               </div>
               <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp;9000</p>
               <div class="product-item-price-container">
-                <del class="pass-through-text">32500 Р.</del>
-                <ins class="new-price">25500 Р.</ins>
+                <s class="pass-through-text">32500 Р.</s>
+                <p class="new-price">25500 Р.</p>
               </div>
               <div class="popular-products-button-container">
                   <button class="popular-products-button buy" type="button">Купить</button>
@@ -151,8 +151,8 @@
               </div>
               <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp;3000</p>
               <div class="product-item-price-container">
-                <del class="pass-through-text">22500 Р.</del>
-                <ins class="new-price">15500 Р.</ins>
+                <s class="pass-through-text">22500 Р.</s>
+                <p class="new-price">15500 Р.</p>
               </div> 
               <div class="popular-products-button-container">
                 <button class="popular-products-button buy" type="button">Купить</button>
@@ -165,8 +165,8 @@
               </div>
               <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp;6000</p>
               <div class="product-item-price-container">
-                <del class="pass-through-text">30500 Р.</del>
-                <ins class="new-price">25500 Р.</ins>
+                <s class="pass-through-text">30500 Р.</s>
+                <p class="new-price">25500 Р.</p>
               </div>
               <div class="popular-products-button-container">
                 <button class="popular-products-button buy" type="button">Купить</button>
@@ -179,8 +179,8 @@
               </div>
               <p class="popular-products-text">Перфоратор BOSCH BFG&nbsp;2000</p>
               <div class="product-item-price-container">
-                <del class="pass-through-text">22500 Р.</del>
-                <ins class="new-price">12500 Р.</ins>
+                <s class="pass-through-text">22500 Р.</s>
+                <p class="new-price">12500 Р.</p>
               </div>
               <div class="popular-products-button-container">
                 <button class="popular-products-button buy" type="button">Купить</button>
@@ -245,7 +245,7 @@
           <div class="services-info-wripper">
             <h2>Сервисы</h2>
             <p class="services-info">
-              Хороший интернет-магазин отличается от&nbsp;плохого не&nbsp;только ценами!
+              Хороший интернет-магазин отличается от плохого не только ценами!
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
           </div>
@@ -265,21 +265,25 @@
           <section class="services-description">
             <ul class="services-description-list">
               <li class="services-description-item services-description-item-delivery current">
+                 <!-- Возможно внутри этого списка имеет смысл сделать список определений?
+                Например термин "Доставка" и описание термина "Мы с удовольствием доставим..."
+                Если так будет семантичнее, тогда я могу в теги списка определений завернуть существующие
+                заголовки и параграфы, из моей верстки?-->
                 <h3>Доставка</h3>
                 <p class="delivery">
                   Мы с&nbsp;удовольствием доставим ваш товар прямо
-                  к&nbsp;вашему подъезду совершенно бесплатно!<br>
+                  к вашему подъезду совершенно бесплатно!<br>
                   Ведь мы неплохо заработаем,<br>
-                  поднимая его на&nbsp;ваш этаж!
+                  поднимая его на ваш этаж!
                 </p>
               </li>
               <li class="services-description-item services-description-item-guaranty">
                 <h3>Гарантия</h3>
                 <p class="guaranty">
-                  Если купленный у&nbsp;нас товар поломается или заискрит,
-                  а&nbsp;также в&nbsp;случае пожара, спровоцированного его возгоранием,
-                  вы всегда можете быть уверены в&nbsp;нашей гарантии.
-                  Мы обменяем сгоревший товар на&nbsp;новый.
+                  Если купленный у нас товар поломается или заискрит,
+                  а&nbsp;также в случае пожара, спровоцированного его возгоранием,
+                  вы всегда можете быть уверены в нашей гарантии.
+                  Мы обменяем сгоревший товар на новый.
                   Дом уж восстановите как-нибудь сами.
                 </p>
               </li>
@@ -287,8 +291,8 @@
               <li class="services-description-item services-description-item-credit">
                 <h3>Кредит</h3>
                 <p class="credit">
-                  Залезть в&nbsp;долговую яму стало проще!<br>
-                  Кредитные консультанты придут вам на&nbsp;помощь.
+                  Залезть в долговую яму стало проще!<br>
+                  Кредитные консультанты придут вам на помощь.
                 </p>
                 <button class="tipical-red-button">ОТПРАВИТЬ ЗАЯВКУ</button>
               </li>
@@ -300,11 +304,11 @@
         <section class="about-us">
           <h2 class="visually-hidden">О нас</h2>
           <p class="about-us-company-name">Компания «Техномарт»</p>
-          <p class="about-us-info about-us-info-shopping">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
-            ремонта и&nbsp;строительства не&nbsp;оставит равнодушными любителей сэкономить на&nbsp;
-            гастарбайтерах. 
+          <p class="about-us-info about-us-info-shopping">
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+            ремонта и строительства не оставит равнодушными любителей сэкономить на&nbsp;гастарбайтерах. 
           </p>
-          <p class="about-us-info about-us-info-delivery">Мы можем доставить ваш товар в&nbsp;самые отдаленные точки России! <br> 
+          <p class="about-us-info about-us-info-delivery">Мы можем доставить ваш товар в самые отдаленные точки России! <br> 
             Техномарт работает со&nbsp;многими транспортными компаниями:
           </p>
           <ul class="about-us-list">
@@ -318,12 +322,12 @@
               ЖелДорЭкспедиция
             </li>
           </ul>
-          <a class="tipical-red-button" href="blank.html">Подробнее о&nbsp;компании</a>
+          <a class="tipical-red-button" href="blank.html">Подробнее о компании</a>
         </section>
         <section class="contacts">
-          <h2 class="visually-hidden">Мы на&nbsp;карте города</h2>
+          <h2 class="visually-hidden">Мы на карте города</h2>
           <p class="contacts-header">Контакты</p>
-          <p class="contacts-info">Вы можете забрать товар сами, заехав в&nbsp;наш офис:</p>
+          <p class="contacts-info">Вы можете забрать товар сами, заехав в наш офис:</p>
           <!-- Карта -->
           <a href="blank.html">
             <img class="map-img" src="img/map.png" width="300" height="158" alt="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
@@ -339,13 +343,13 @@
              width="943" height="443" style="border:0;" allowfullscreen="" loading="lazy" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
           </div>
         </section>
-        <!-- Форма обратной  связи -->
+        <!-- Форма обратной связи-->
         <form class="popup-feedback" action="https://echo.htmlacademy.ru" method="post">
           <label class="popup-feedback-description-text" for="user-name-input">Ваше имя:</label>
           <label class="popup-feedback-description-email" for="user-email-input">Ваш e-mail:</label>
           <input type="text" name="user-name" placeholder="Имя Фамилия" id="user-name-input">
           <input type="email" name="user-email" placeholder="email@example.com" id="user-email-input">
-          <label class="popup-feedback-description" for="user-comment-textarea">Текст&nbsp;письма:</label>
+          <label class="popup-feedback-description" for="user-comment-textarea">Текст письма:</label>
           <textarea name="user-comment" rows="5" id="user-comment-textarea">В свободной форме</textarea>
           <div class="popup-feedback-bottom-bar">
             <button class="tipical-red-button tipical-red-button-popup" type="submit">Отправить</button>
